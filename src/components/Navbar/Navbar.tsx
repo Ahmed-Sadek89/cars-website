@@ -5,15 +5,15 @@ import ThirdPart from './Desktop/ThirdPart'
 
 const Navbar = () => {
     return (
-        <div className='bg-white py-6'>
-            <div className='custom-container'>
+        <header className='bg-white py-6'>
+            <div className='custom-container1'>
                 <div className='w-full flex flex-row items-center justify-between gap-2'>
                     <FirstPart />
                     <SecondPart />
                     <ThirdPart />
                 </div>
             </div>
-        </div>
+        </header>
     )
 }
 

@@ -11,7 +11,8 @@ const config: Config = {
       colors: {
         "custom-blue": "#405FF2",
         "custom-black": "#050B20",
-        "custom-green": "#42AD31"
+        "custom-green": "#42AD31",
+        "custom-gray": "#252b3d"
       }
     },
   },

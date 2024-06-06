@@ -7,10 +7,17 @@ body {
   font-family: "DM Sans", sans-serif;
 }
 
-.custom-container{
+.custom-container1{
   width: 100%;
   max-width: 1500px;
   margin: 0px auto;
   padding-left: 10px;
   padding-right: 10px;
+}
+.custom-container2{
+  width: 100%;
+  max-width: 1200px;
+  margin: 0px auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
