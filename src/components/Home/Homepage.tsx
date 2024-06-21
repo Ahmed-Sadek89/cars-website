@@ -1,16 +1,11 @@
-import { Metadata } from 'next'
 import MainSection from './MainSection/MainSection'
-
-export const metadata: Metadata = {
-    title: 'Auto Parts | Homepage',
-    description: 'Generated for Auto Parts',
-}
+import Vehicles from './Vehicles'
 
 const Homepage = () => {
     return (
         <>
             <MainSection />
-            <section>Vehicles types</section>
+            <Vehicles />
             <section>offers</section>
             <section>car model animation</section>
             <section>tabs and its items</section>
