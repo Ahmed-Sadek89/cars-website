@@ -1,6 +1,5 @@
-import Link from 'next/link'
 import React from 'react'
-import MainSectionForm from '../MainSectionForm/MainSectionForm'
+import MainSectionForm from '../../MainSectionForm/MainSectionForm'
 import MainSectionSlider from './MainSectionSlider'
 
 const MainSection = () => {
