@@ -1,3 +1,4 @@
+import Advertisments from './Advertisments/Advertisments'
 import CarCollections from './CarCollections/CarCollections'
 import CarModels from './CarModels'
 import MainSection from './MainSection/MainSection'
@@ -12,7 +13,7 @@ const Homepage = () => {
             <CarCollections />
             <CarModels />
             <TabsAndItems />
-            <section>advertisments</section>
+            <Advertisments />
         </>
     )
 }
