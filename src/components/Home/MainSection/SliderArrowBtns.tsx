@@ -7,10 +7,10 @@ type props = {
 const SliderArrowBtns = ({ handleNext, handlePrev }: props) => {
     return (
         <div className='flex flex-row justify-between items-center absolute top-[50%] w-full'>
-            <button onClick={handlePrev} className='mx-5 bg-gray-500 py-4 px-5 rounded-full'>
+            <button onClick={handlePrev} className='mx-5 bg-[#6b728063] h-[50px] w-[50px] flex items-center justify-center rounded-full'>
                 <ArrowBackIosNewIcon className='text-white text-xl' />
             </button>
-            <button onClick={handleNext} className='mx-5 bg-gray-500 py-4 px-5 rounded-full'>
+            <button onClick={handleNext} className='mx-5 bg-[#6b728063] h-[50px] w-[50px] flex items-center justify-center rounded-full'>
                 <ArrowForwardIosIcon className='text-white text-xl' />
             </button>
         </div>

@@ -1,3 +1,5 @@
+import CarCollections from './CarCollections/CarCollections'
+import CarModels from './CarModels'
 import MainSection from './MainSection/MainSection'
 import Vehicles from './Vehicles'
 
@@ -6,8 +8,8 @@ const Homepage = () => {
         <>
             <MainSection />
             <Vehicles />
-            <section>offers</section>
-            <section>car model animation</section>
+            <CarCollections />
+            <CarModels />
             <section>tabs and its items</section>
             <section>advertisments</section>
         </>
