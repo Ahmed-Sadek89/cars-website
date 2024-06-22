@@ -18,7 +18,7 @@ export const mainSectionDisplayData = [
         p: "Get a great discount now and shop its products to get your car needs easily"
     },
     {
-        image: "/home/main-section/main-background1.jpg",
+        image: "/home/main-section/main-background3.jpg",
         h2: {
             title: "EXCITING BUNDLE GET",
             special: "30% OFF"
