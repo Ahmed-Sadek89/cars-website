@@ -9,7 +9,7 @@ import DrawerDepartmentList from './DrawerDepartmentList';
 const DrawerLists = ({ toggleDrawer }: { toggleDrawer: (event: React.KeyboardEvent | React.MouseEvent) => void }) => {
     return (
         <Box
-            sx={{ width: 300 }}
+            sx={{ width: 350 }}
             role="presentation"
             onKeyDown={toggleDrawer}
         >
@@ -22,9 +22,6 @@ const DrawerLists = ({ toggleDrawer }: { toggleDrawer: (event: React.KeyboardEve
             <Divider />
             <List>
                 <DrawerDepartmentList toggleDrawer={toggleDrawer} />
-                {/* // My Garage 2018 BMW 3 - Series 2
-    // My Account, Hello, Ahmed
-    // My Wish List Items  */}
             </List>
         </Box>
     )

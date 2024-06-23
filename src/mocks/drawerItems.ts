@@ -4,9 +4,7 @@ export const drawerItems = [
         title: "Wheel & Tires"
     },
 
-    // My Garage 2018 BMW 3 - Series 2
-    // My Account, Hello, Ahmed
-    // My Wish List Items 
+
     {
         image: "/drawer-items/d2.png",
         title: "Parts"
@@ -34,5 +32,18 @@ export const drawerItems = [
     {
         image: "/drawer-items/d8.png",
         title: "Interior Accessories"
-    }
+    },
+    {
+        title: "My Garage",
+        desc: "2018 BMW 3 - Series 2"
+    },
+    {
+        title: "My Account",
+        desc: "Hello, username"
+    },
+    {
+        title: "My Wish List",
+        desc: "Items"
+    },
+    
 ]

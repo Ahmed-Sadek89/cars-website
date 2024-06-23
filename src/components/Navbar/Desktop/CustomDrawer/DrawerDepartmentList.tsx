@@ -1,10 +1,11 @@
 "use client"
 import React from 'react';
-import {  ListItem, ListItemButton } from '@mui/material'
+import { Divider, ListItem, ListItemButton } from '@mui/material'
 import Image from 'next/image'
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import { drawerItems } from '@/mocks/drawerItems';
 import Link from 'next/link';
+import { drawerContact } from '@/mocks/drawerConatct';
 
 
 const DrawerDepartmentList = ({ toggleDrawer }: { toggleDrawer: (event: React.KeyboardEvent | React.MouseEvent) => void }) => {
@@ -18,10 +19,32 @@ const DrawerDepartmentList = ({ toggleDrawer }: { toggleDrawer: (event: React.Ke
                     <Link href={"#"} className='w-full' onClick={toggleDrawer}>
                         <ListItemButton className='flex flex-row items-center justify-between w-full'>
                             <div className='flex flex-row items-center gap-3'>
-                                <Image src={link.image} alt={link.title} width={40} height={40} className='object-contain' />
+                                {
+                                    link.image &&
+                                    <Image src={link.image} alt={link.title} width={40} height={40} className='object-contain' />
+                                }
                                 <h4 className='text-custom-black' >{link.title}</h4>
+                                {
+                                    link.desc &&
+                                    <span className='text-gray-500'>{link.desc}</span>
+                                }
                             </div>
                             <KeyboardArrowRightIcon className='text-[#5C5C5C]' />
+                        </ListItemButton>
+                    </Link>
+                </ListItem>
+            ))}
+            <Divider className='my-4' />
+            {drawerContact.map((link, index) => (
+                <ListItem key={index} disablePadding className='mb-3'>
+                    <Link href={"#"} className='w-full' onClick={toggleDrawer}>
+                        <ListItemButton className='flex gap-3 flex-row items-center w-full'>
+                            {
+                                link.image &&
+                                <Image src={link.image} alt={link.title} width={20} height={20} className='object-contain' />
+                            }
+                            <h4 className='text-custom-black' >{link.title}</h4>
+
                         </ListItemButton>
                     </Link>
                 </ListItem>
