@@ -3,13 +3,14 @@ import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import LangChangeModal from './LangChangeModal'
+import CustomDrawer from './CustomDrawer/CustomDrawer'
 
 const FirstPart = () => {
   const [open, setOpen] = useState(false);
 
   return (
     <div className='flex flex-row items-center gap-3'>
-      <Image src={'/menuIcon.svg'} alt='menu' width={20} height={20} className='cursor-pointer' />
+      <CustomDrawer />
       <Link href={'/'}>
         <Image src={'/logo.svg'} alt='logo' width={100} height={50} />
       </Link>
