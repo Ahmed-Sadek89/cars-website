@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { carModels, carSeries, carYear } from '@/mocks/searchInputs';
 
 const MainSectionForm = ({ setOpen }: {
-    setOpen: React.Dispatch<React.SetStateAction<boolean>>
+    setOpen: React.Dispatch<React.SetStateAction<boolean>> | null
 }) => {
     const [carModelValue, setCarModelValue] = useState(carModels[0]);
     const [carYearValue, setCarYearValue] = useState(carYear[0]);
@@ -23,7 +23,7 @@ const MainSectionForm = ({ setOpen }: {
                     <Link
                         href={`/search?car_model=${carModelValue}&car_year=${carYearValue}&car_serie=${carSeriesValue}`}
                         className='flex flex-row items-center justify-center gap-4 bg-custom-blue text-white rounded-full w-full h-full'
-                        onClick={() => setOpen(false)}
+                        onClick={() => setOpen ? setOpen(false) : null}
                     >
                         <SearchIcon />
                         <span className='capitalize'>search cars</span>
