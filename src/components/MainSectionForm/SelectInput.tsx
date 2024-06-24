@@ -4,24 +4,25 @@ import * as React from 'react';
 import { MenuProps, selectStyle } from './selectStyles';
 
 
+type props = {
+    data: string[],
+    value: string,
+    setValue: React.Dispatch<React.SetStateAction<string>>
+}
 
-
-
-export default function SelectInput({data}: {data: string[]}) {
-    const [selectValue, setSelectValue] = React.useState<string>(data[0]);
-
+export default function SelectInput({ data, value, setValue }: props) {
     return (
         <FormControl className='w-full border-0'>
             <Select
                 sx={selectStyle}
-                value={selectValue}
-                onChange={(e) => setSelectValue(e.target.value)}
+                value={value}
+                onChange={(e) => setValue(e.target.value)}
                 input={<OutlinedInput />}
                 MenuProps={MenuProps}
             >
-                {data.map((name) => (
+                {data.map((name, index) => (
                     <MenuItem
-                        key={name}
+                        key={index}
                         value={name}
                     >
                         {name}

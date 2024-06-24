@@ -1,20 +1,33 @@
-import React from 'react'
+"use client"
+import React, { useState } from 'react'
 import SelectInput from './SelectInput'
 import SearchIcon from '@mui/icons-material/Search';
+import Link from 'next/link';
+import { carModels, carSeries, carYear } from '@/mocks/searchInputs';
 
-const MainSectionForm = () => {
+const MainSectionForm = ({ setOpen }: {
+    setOpen: React.Dispatch<React.SetStateAction<boolean>>
+}) => {
+    const [carModelValue, setCarModelValue] = useState(carModels[0]);
+    const [carYearValue, setCarYearValue] = useState(carYear[0]);
+    const [carSeriesValue, setCarSeriesValue] = useState(carSeries[0]);
+
     return (
         <section className='custom-container2'>
             <div className=' bg-custom-blue rounded-md shadow-xl pb-6 pt-9 px-8 flex flex-col gap-3'>
                 <h6 className='text-white'>FIND PARTS FOR YOUR VEHICLE</h6>
                 <div className='bg-white grid grid-cols-4 gap-3 items-center rounded-full p-4'>
-                    <SelectInput data={['Toyota Corolla', 'Honda Civic', 'Ford Mustang', 'Chevrolet Camaro', 'Tesla Model S', 'BMW 3 Series', 'Audi A4', 'Mercedes-Benz C-Class', 'Volkswagen Golf', 'Nissan Altima']} />
-                    <SelectInput data={Array.from({ length: 2019 - 2007 + 1 }, (_, i) => (2007 + i).toString())} />
-                    <SelectInput data={['1-Series', '2-Series', '3-Series', '4-Series']} />
-                    <button className='flex flex-row items-center justify-center gap-4 bg-custom-blue text-white rounded-full w-full h-full'>
+                    <SelectInput data={carModels} value={carModelValue} setValue={setCarModelValue} />
+                    <SelectInput data={carYear} value={carYearValue} setValue={setCarYearValue} />
+                    <SelectInput data={carSeries} value={carSeriesValue} setValue={setCarSeriesValue} />
+                    <Link
+                        href={`/search?car_model=${carModelValue}&car_year=${carYearValue}&car_serie=${carSeriesValue}`}
+                        className='flex flex-row items-center justify-center gap-4 bg-custom-blue text-white rounded-full w-full h-full'
+                        onClick={() => setOpen(false)}
+                    >
                         <SearchIcon />
-                        <span>search cars</span>
-                    </button>
+                        <span className='capitalize'>search cars</span>
+                    </Link>
                 </div>
             </div>
         </section>
