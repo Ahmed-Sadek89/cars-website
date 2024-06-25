@@ -23,8 +23,8 @@ const CarModels = () => {
                     {
                         carModels.map(index => (
                             <div key={index}>
-                                <div className="h-[150px] flex items-center justify-center">
-                                    <Image src={index} alt={index} width={100} height={100} className="object-cover" />
+                                <div className="h-[150px] mx-10 gap-10 flex items-center justify-center">
+                                    <Image src={index} alt={index} width={140} height={140} className="object-cover" />
                                 </div>
                             </div>
                         ))

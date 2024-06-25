@@ -11,13 +11,13 @@ const CarCollections = () => {
                         <Link
                             href={'#'}
                             key={index}
-                            className={`h-[40vh] w-full bg-no-repeat bg-cover bg-center rounded-lg overflow-hidden`}
+                            className={`h-[30vh] w-full bg-no-repeat bg-cover bg-center rounded-lg overflow-hidden`}
                             style={{ backgroundImage: `url(${collection.image})` }}
                         >
                             <div className='bg-[#00000066] w-full  h-full flex justify-center custom-style'>
                                 <div className='flex flex-col gap-5 items-center justify-end pb-10 text-center text-white'>
-                                    <h2 className='text-4xl tracking-widest'>{collection.name}</h2>
-                                    <p className='text-[#E1E1E1] uppercase text-md font-light'>
+                                    <h2 className='text-2xl tracking-widest'>{collection.name}</h2>
+                                    <p className='text-[#E1E1E1] uppercase text-sm font-light'>
                                         all collections
                                     </p>
                                 </div>

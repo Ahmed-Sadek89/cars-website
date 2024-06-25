@@ -29,26 +29,26 @@ const MainSectionSlider = () => {
                     mainSectionDisplayData.map((section, index) => (
                         <section
                             key={index}
-                            className={`h-[80vh] w-full bg-no-repeat bg-cover bg-center`}
+                            className={`h-[50vh] w-full bg-no-repeat bg-cover bg-center`}
                         >
                             <Image src={section.image} alt={section.image} fill className="z-10 relative object-cover" />
                             <div className='bg-[#00000066] w-full  h-full flex  justify-center py-20 z-20 relative'>
-                                <div className='flex flex-col gap-5 items-center justify-center text-center text-white'>
+                                <div className='flex flex-col gap-2 items-center justify-center text-center text-white'>
                                     {
                                         section.h1 &&
-                                        <h1 className='mb-5 text-7xl font-bold'>{section.h1}</h1>
+                                        <h1 className='mb-2 text-6xl font-bold'>{section.h1}</h1>
                                     }
-                                    <h2 className={`text-5xl font-semibold flex flex-row" items-center gap-2`}>
+                                    <h2 className={`text-2xl font-semibold flex flex-row" items-center gap-2`}>
                                         <span className={index !== 0 ? "text-white" : "text-custom-blue"}> {section.h2.title}</span>
                                         <span className={index !== 0 ? "text-custom-blue" : "text-white"}>{section.h2.special}</span>
                                     </h2>
                                     {
                                         section.h3 &&
-                                        <h3 className='text-4xl font-semibold'>
+                                        <h3 className='text-lg font-semibold'>
                                             {section.h3}
                                         </h3>
                                     }
-                                    <p className='w-3/4 text-md leading-[1.3] font-semibold'>
+                                    <p className='w-3/4 text-sm leading-[1.3] '>
                                         {section.p}
                                     </p>
                                     <Link href={'#'} className='rounded-lg bg-custom-blue mt-5 text-white px-20 py-2'>Book Now</Link>

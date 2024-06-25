@@ -21,7 +21,7 @@ const MainSectionForm = ({ setOpen }: {
                     <SelectInput data={carYear} value={carYearValue} setValue={setCarYearValue} />
                     <SelectInput data={carSeries} value={carSeriesValue} setValue={setCarSeriesValue} />
                     <Link
-                        href={`/search?car_model=${carModelValue}&car_year=${carYearValue}&car_serie=${carSeriesValue}`}
+                        href={`/search?car_model=${carModelValue}&car_year=${carYearValue}&car_series=${carSeriesValue}`}
                         className='flex flex-row items-center justify-center gap-4 bg-custom-blue text-white rounded-full w-full h-full'
                         onClick={() => setOpen ? setOpen(false) : null}
                     >
