@@ -1,5 +1,6 @@
 import Search from "@/components/Search/Search";
 import { Metadata } from "next";
+import { Suspense } from "react";
 
 type props = {
   searchParams: {
@@ -16,8 +17,12 @@ export async function generateMetadata({ searchParams }: props): Promise<Metadat
   }
 }
 
-const page = () => {
-  return <Search />
+const Page = () => {
+  return (
+    <Suspense>
+      <Search />
+    </Suspense>
+  )
 }
 
-export default page
+export default Page
