@@ -1,9 +1,14 @@
-import React from 'react'
+import Verification from '@/components/Auth/Verification'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Auto Parts | Signin Verification',
+  description: 'Generated for Auto Parts',
+}
+
 
 const page = () => {
-  return (
-    <div>verification</div>
-  )
+  return <Verification />
 }
 
 export default page

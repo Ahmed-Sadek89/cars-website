@@ -3,7 +3,7 @@ import Image from 'next/image'
 import VehicleSelectionBtn from './VehicleSelectionBtn'
 import CustomDropDown from './CustomDropDown/CustomDropDown'
 import { usePathname } from 'next/navigation'
-import { checkIsNotAuthPages } from './isNotAuthPages'
+import { checkIsNotAuthPages } from '../../../global/isNotAuthPages'
 import LockIcon from '@mui/icons-material/Lock';
 import Link from 'next/link'
 

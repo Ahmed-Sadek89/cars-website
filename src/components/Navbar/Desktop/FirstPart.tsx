@@ -5,7 +5,7 @@ import Link from 'next/link'
 import LangChangeModal from './LangChangeModal'
 import CustomDrawer from './CustomDrawer/CustomDrawer'
 import { usePathname } from 'next/navigation'
-import { checkIsNotAuthPages } from './isNotAuthPages'
+import { checkIsNotAuthPages } from '../../../global/isNotAuthPages'
 
 const FirstPart = () => {
   const [open, setOpen] = useState(false);

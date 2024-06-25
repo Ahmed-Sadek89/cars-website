@@ -1,9 +1,14 @@
-import React from 'react'
+import Login from '@/components/Auth/Login'
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: 'Auto Parts | Login',
+  description: 'Generated for Auto Parts',
+}
+
 
 const page = () => {
-  return (
-    <div>login</div>
-  )
+  return <Login />
 }
 
 export default page

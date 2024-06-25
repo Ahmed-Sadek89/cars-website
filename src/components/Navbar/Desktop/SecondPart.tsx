@@ -1,7 +1,7 @@
 "use client"
 import { InputBase } from '@mui/material'
 import SearchIcon from '@mui/icons-material/Search';
-import { checkIsNotAuthPages } from './isNotAuthPages';
+import { checkIsNotAuthPages } from '../../../global/isNotAuthPages';
 import { usePathname } from 'next/navigation';
 
 const SecondPart = () => {

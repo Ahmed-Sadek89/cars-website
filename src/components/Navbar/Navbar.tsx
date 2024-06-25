@@ -3,7 +3,7 @@ import { usePathname } from 'next/navigation'
 import FirstPart from './Desktop/FirstPart'
 import SecondPart from './Desktop/SecondPart'
 import ThirdPart from './Desktop/ThirdPart'
-import { checkIsNotAuthPages } from './Desktop/isNotAuthPages'
+import { checkIsNotAuthPages } from '../../global/isNotAuthPages'
 
 const Navbar = () => {
     const path = usePathname()
