@@ -4,13 +4,18 @@ import Image from 'next/image'
 import Link from 'next/link'
 import LangChangeModal from './LangChangeModal'
 import CustomDrawer from './CustomDrawer/CustomDrawer'
+import { usePathname } from 'next/navigation'
+import { checkIsNotAuthPages } from './isNotAuthPages'
 
 const FirstPart = () => {
   const [open, setOpen] = useState(false);
-
+  const path = usePathname();
+  const isNotAuthPage = checkIsNotAuthPages(path)
   return (
     <div className='flex flex-row items-center gap-3'>
-      <CustomDrawer />
+      {
+        isNotAuthPage && <CustomDrawer />
+      }
       <Link href={'/'}>
         <Image src={'/logo.svg'} alt='logo' width={100} height={50} />
       </Link>

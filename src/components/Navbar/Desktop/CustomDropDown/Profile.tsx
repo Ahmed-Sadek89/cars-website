@@ -10,12 +10,12 @@ const Profile = () => {
                 <h3 className='font-bold text-custom-black'>My Account</h3>
                 <div className='flex flex-col gap-4 items-center text-center'>
                     <Link
-                        href={'/signin'}
+                        href={'/login'}
                         className='w-full bg-custom-blue text-white py-3 rounded'
                     >Sign in</Link>
                     <p className='flex flex-row items-center gap-2'>
                         <span className='text-custom-gray'>New Customer?</span>
-                        <Link href={'/signup'} className='text-custom-blue'>Sign Up</Link>
+                        <Link href={'/signin'} className='text-custom-blue'>Sign Up</Link>
                     </p>
                 </div>
             </div>
@@ -24,7 +24,7 @@ const Profile = () => {
                     profileLinks.map((profileLink, index) => (
                         <Link
                             key={index}
-                            href="#"
+                            href={profileLink.path}
                             className='w-full flex pb-3 flex-row items-center justify-between border-b border-b-[#525252]'
                         >
                             <div className='flex flex-row items-center gap-3'>
