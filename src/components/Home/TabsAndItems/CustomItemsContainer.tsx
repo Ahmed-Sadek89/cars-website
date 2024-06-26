@@ -10,8 +10,8 @@ const CustomItemsContainer = ({ value }: { value: number }) => {
             <div className='grid grid-cols-5 gap-10 items-center'>
                 {tabsAndItems[value].item.map((item, index) => (
                     <Link href={"#"} key={index} className='w-full h-full flex flex-col items-center justify-around '>
-                        <div className='h-[150px] flex'>
-                            <Image src={item.image} alt={item.title} width={100} height={100} className='object-contain' />
+                        <div className='h-[200px] flex'>
+                            <Image src={item.image} alt={item.title} width={150} height={150} className='object-contain' />
                         </div>
                         <h6 className='font-bold'>{item.title}</h6>
                     </Link>

@@ -25,9 +25,8 @@ const Login = () => {
                     <CustomInput label="Please enter your email *" type='email' placeholder='example@gmail.com' />
                     <div className='flex flex-col gap-1'>
                         <CustomPasswordInput label='Please enter your passowrd*' />
-                        <h6>
-                            <span className='text-sm text-[#111]'>Forgot your password? </span>
-                            <Link href={'#'} className='text-custom-blue'>click here</Link>
+                        <h6 className="flex flex-row items-center w-full justify-end">
+                            <Link href={'#'} className='text-custom-blue'>Forgot your password?</Link>
                         </h6>
                     </div>
                     <button className="w-full rounded text-white bg-custom-blue py-3 my-3">
