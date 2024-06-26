@@ -2,7 +2,7 @@
 import Link from 'next/link'
 import React, { useState } from 'react'
 import CancelOrderModal from './Modals/CancelOrderModal'
-import TrackOrderModal from './Modals/TrackOrderModal'
+import TrackOrderModal from './Modals/TrackOrderModal/TrackOrderModal'
 
 const OrderOptions = ({ id }: { id: number }) => {
     const [trackOpen, setTrackOpen] = useState(false)
