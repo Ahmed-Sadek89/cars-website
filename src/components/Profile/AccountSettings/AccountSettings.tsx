@@ -1,9 +1,12 @@
 import React from 'react'
+import FirstLine from './FirstLine'
+import SecondLine from './SecondLine'
 
 const AccountSettings = () => {
     return (
-        <div>
-            AccountSettings
+        <div className='flex flex-col gap-20'>
+            <FirstLine />
+            <SecondLine />
         </div>
     )
 }
