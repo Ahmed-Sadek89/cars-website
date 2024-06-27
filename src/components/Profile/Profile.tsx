@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 import CustomTabs from './CustomTabs'
 import { Divider } from '@mui/material'
-import ProfileTabs from './ProfileTabs/ProfileTabs'
+import ProfileTabsAndOrders from './ProfileTabs/ProfileTabsAndOrders'
 import OrderConfig from './OrderConfig/OrderConfig'
 import AccountSettings from './AccountSettings/AccountSettings'
 import Viewed from './Viewed/Viewed'
@@ -14,7 +14,7 @@ const Profile = () => {
             <CustomTabs value={value} setValue={setValue} />
             <div className='pt-20 pb-10 flex flex-col gap-10'>
                 <div className='custom-container1'>
-                    <ProfileTabs />
+                    <ProfileTabsAndOrders />
                 </div>
                 <Divider />
                 <div className='custom-container1'>
