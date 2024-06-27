@@ -18,7 +18,7 @@ const TrackOrderModal = ({ open, setOpen }: props) => {
         <Modal
             open={open}
             onClose={() => {
-                router.push('/orders');
+                router.back();
                 setOpen(false)
             }}
             closeAfterTransition
@@ -33,9 +33,12 @@ const TrackOrderModal = ({ open, setOpen }: props) => {
                 <div className='z-[100] border-none outline-none'>
                     <div className='absolute top-[50%] left-[50%] w-full md:w-3/4 overflow-hidden h-full  border-none outline-none flex flex-col gap-3' style={{ transform: "translate(-50%, -50%)" }}>
                         <div className='p-10 bg-white rounded flex flex-col justify-start items-start gap-24 min-h-screen overflow-y-scroll relative' >
-                            <Link href={'/orders'} onClick={() => setOpen(false)} className='absolute right-3 top-3'>
+                            <div onClick={() => {
+                                setOpen(false);
+                                router.back()
+                            }} className='absolute right-3 top-3 cursor-pointer'>
                                 <ClearIcon />
-                            </Link>
+                            </div>
                             <TrackOrderDetails />
                             <div className='w-full flex flex-col gap-10'>
                                 <TrackOrderNumber />

@@ -15,7 +15,7 @@ const CancelOrderModal = ({ open, setOpen }: props) => {
         <Modal
             open={open}
             onClose={() => {
-                router.push('/orders');
+                router.back()
                 setOpen(false)
             }}
             closeAfterTransition
@@ -48,16 +48,20 @@ const CancelOrderModal = ({ open, setOpen }: props) => {
                                 </h2>
                             </div>
                             <div className='w-full flex items-center justify-center mt-10 gap-6'>
-                                <Link
-                                    href={`/orders`}
+                                <div
                                     className='py-2 text-center w-1/3 rounded bg-custom-blue text-white'
-                                    onClick={() => setOpen(false)}
-                                >Return</Link>
-                                <Link
-                                    href={`/orders`}
+                                    onClick={() => {
+                                        setOpen(false);
+                                        router.back()
+                                    }}
+                                >Return</div>
+                                <div
                                     className='py-2 text-center w-1/3 rounded bg-[#C60000] text-white'
-                                    onClick={() => setOpen(false)}
-                                >Cancel Order</Link>
+                                    onClick={() => {
+                                        setOpen(false);
+                                        router.back()
+                                    }}
+                                >Cancel Order</div>
                             </div>
                         </div>
                     </div>
