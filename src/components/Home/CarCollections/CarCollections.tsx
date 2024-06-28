@@ -9,7 +9,7 @@ const CarCollections = () => {
                 {
                     carCollections.map((collection, index) => (
                         <Link
-                            href={'#'}
+                            href={collection.path}
                             key={index}
                             className={`h-[30vh] w-full bg-no-repeat bg-cover bg-center rounded-lg overflow-hidden`}
                             style={{ backgroundImage: `url(${collection.image})` }}
