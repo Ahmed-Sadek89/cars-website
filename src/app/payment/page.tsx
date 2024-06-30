@@ -1,3 +1,4 @@
+import Payment from "@/components/Payment/Payment";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -7,11 +8,7 @@ export const metadata: Metadata = {
 
 
 const page = () => {
-    return (
-        <>
-            payment
-        </>
-    )
+    return <Payment />
 }
 
 export default page

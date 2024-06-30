@@ -36,8 +36,8 @@ const Cart = () => {
                     <span>Subtotal: $1,567.27</span>
                 </p>
                 <div className='w-4/5 flex flex-row items-center gap-4'>
-                    <Link href={'#'} className='w-full rounded text-white text-center uppercase py-3 bg-custom-blue'>Checkout Now</Link>
-                    <Link href={'#'} className='w-full rounded text-white text-center uppercase py-3 bg-custom-green'>View CART</Link>
+                    <Link href={'/payment'} className='w-full rounded text-white text-center uppercase py-3 bg-custom-blue'>Checkout Now</Link>
+                    <Link href={'/cart'} className='w-full rounded text-white text-center uppercase py-3 bg-custom-green'>View CART</Link>
                 </div>
             </div>
         </div>
