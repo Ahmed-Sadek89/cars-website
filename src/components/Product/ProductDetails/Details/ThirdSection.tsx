@@ -4,9 +4,11 @@ import CustomSelectInput from './CustomSelectInput'
 import RemoveIcon from '@mui/icons-material/Remove';
 import AddIcon from '@mui/icons-material/Add';
 import { useState } from 'react';
+import DetailsModel from './DetailsModel/DetailsModel';
 
 const ThirdSection = () => {
-    const [counter, setCounter] = useState(1)
+    const [counter, setCounter] = useState(1);
+    const [open, setOpen] = useState(false)
     return (
         <div className='flex flex-col gap-3'>
             <h5 className='font-bold'>CHOOSE OPTION(S):</h5>
@@ -25,9 +27,10 @@ const ThirdSection = () => {
                     Add To Cart
                 </Link>
             </div>
-            <button className='w-full py-5 rounded border border-custom-black text-custom-black font-bold'>
+            <button onClick={() => setOpen(true)} className='w-full py-3 rounded border border-custom-black text-custom-black font-bold'>
                 PRODUCT OPTIONS
             </button>
+            <DetailsModel setOpen={setOpen} open={open} />
         </div>
     )
 }

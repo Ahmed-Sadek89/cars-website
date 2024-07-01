@@ -4,6 +4,8 @@ import CustomTabs from './CustomTabs'
 import Links from './Links';
 import { Divider } from '@mui/material';
 import ProductDetails from './ProductDetails/ProductDetails';
+import ProductProps from './ProductProps/ProductProps';
+import SimilarProducts from './SimilarProducts';
 
 const Product = () => {
     const [value, setValue] = useState(0);
@@ -15,7 +17,9 @@ const Product = () => {
                 <ProductDetails />
             </div>
             <Divider />
-            <div>other</div>
+            <ProductProps />
+            <Divider />
+            <SimilarProducts />
         </>
     )
 }
