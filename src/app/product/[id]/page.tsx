@@ -1,3 +1,4 @@
+import Product from "@/components/Product/Product"
 import { Metadata } from "next"
 
 type props = {
@@ -14,11 +15,7 @@ export async function generateMetadata({ params }: props): Promise<Metadata> {
 }
 
 const page = () => {
-    return (
-        <>
-            product id
-        </>
-    )
+    return <Product />
 }
 
 export default page
