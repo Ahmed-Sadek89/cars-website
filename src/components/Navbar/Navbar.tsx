@@ -1,8 +1,8 @@
 "use client"
 import { usePathname } from 'next/navigation'
-import FirstPart from './Desktop/FirstPart'
-import SecondPart from './Desktop/SecondPart'
-import ThirdPart from './Desktop/ThirdPart'
+import FirstPart from './Components/FirstPart'
+import SecondPart from './Components/SecondPart'
+import ThirdPart from './Components/ThirdPart'
 import { checkIsNotAuthPages } from '../../global/isNotAuthPages'
 
 const Navbar = () => {

@@ -9,6 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        'important-white': '#fff !important',
         "custom-blue": "#405FF2",
         "custom-black": "#050B20",
         "custom-green": "#42AD31",
