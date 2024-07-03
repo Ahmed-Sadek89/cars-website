@@ -9,7 +9,7 @@ import { toggleDrawer } from './toggleDrawer';
 export default function CustomDrawer() {
     const [open, setOpen] = React.useState(false);
     return (
-        <div>
+        <div className='hidden md:block'>
             <Image src={'/menuIcon.svg'} alt='menu' width={20} height={20} className='cursor-pointer' onClick={toggleDrawer(setOpen)} />
             <Drawer
                 anchor={'left'}

@@ -9,7 +9,7 @@ const VehicleSelectionBtn = () => {
     return (
         <>
             <button
-                className='bg-custom-blue text-white rounded-md p-4 flex flex-row items-center gap-2 transition duration-300 hover:bg-[#6F88FF26] hover:text-custom-black'
+                className='bg-custom-blue w-full text-white rounded-md p-4 flex flex-row items-center justify-center gap-2 transition duration-300 hover:bg-[#6F88FF26] hover:text-custom-black'
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
                 onClick={() => setOpen(true)}

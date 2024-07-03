@@ -7,12 +7,12 @@ import Image from 'next/image';
 const SecondPart = () => {
   return (
     <div className='custom-container2 py-10'>
-      <div className='flex flex-row items-start w-full justify-between'>
+      <div className='flex flex-row flex-wrap gap-10 md:gap-0 items-start w-full justify-between'>
         {
           footerLinks.map((list, index) => (
             <div key={index} className='flex flex-col gap-4'>
               <h3 className='font-bold text-md'>{list.category}</h3>
-              <div className='flex flex-col gap-6'>
+              <div className='flex flex-col gap-3 md:gap-6'>
                 {list.links.map((link, i) => (
                   <Link key={i} href={link.href} className='font-[200] text-sm'>{link.name}</Link>
                 ))}

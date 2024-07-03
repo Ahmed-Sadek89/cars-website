@@ -11,7 +11,7 @@ const CarCollections = () => {
                         <Link
                             href={collection.path}
                             key={index}
-                            className={`h-[30vh] w-full bg-no-repeat bg-cover bg-center rounded-lg overflow-hidden`}
+                            className={`h-[20vh] lg:h-[30vh] w-full bg-no-repeat bg-cover bg-center rounded-lg overflow-hidden`}
                             style={{ backgroundImage: `url(${collection.image})` }}
                         >
                             <div className='bg-[#00000066] w-full  h-full flex justify-center custom-style'>

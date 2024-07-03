@@ -6,7 +6,7 @@ type props = {
 }
 const SliderArrowBtns = ({ handleNext, handlePrev }: props) => {
     return (
-        <div className='flex flex-row justify-between items-center absolute top-[50%] w-full'>
+        <div className='flex flex-row justify-between items-center absolute top-[25%] lg:top-[50%]  w-full'>
             <button onClick={handlePrev} className='mx-5 bg-[#6b728063] h-[50px] w-[50px] flex items-center justify-center rounded-full'>
                 <ArrowBackIosNewIcon className='text-white text-xl' />
             </button>

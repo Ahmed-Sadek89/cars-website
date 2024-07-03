@@ -22,7 +22,7 @@ const CustomBottomNavigation = () => {
                     className={`${pathname === '/' ? "bg-[url('/bottom-navigation-overlay.svg')]" : ""} h-full w-full  bg-no-repeat bg-center bg-cover flex items-center justify-center pt-5 pb-10`}
                     href={'/'}
                 >
-                    <BottomNavigationAction icon={
+                    <BottomNavigationAction showLabel={false} icon={
                         <HomeOutlinedIcon
                             className={`${checkActiveRoute('/')}`}
                         />
@@ -32,7 +32,7 @@ const CustomBottomNavigation = () => {
                     className={`w-full h-full flex items-center justify-center pt-5 pb-10`}
                     href={'#'}
                 >
-                    <BottomNavigationAction icon={
+                    <BottomNavigationAction showLabel={false} icon={
                         <GridViewOutlinedIcon
                             className={`text-black text-3xl bg-transparent`}
                         />}
@@ -42,7 +42,7 @@ const CustomBottomNavigation = () => {
                     className={`${pathname === '/cart' ? "bg-[url('/bottom-navigation-overlay.svg')]" : ""} h-full w-full  bg-no-repeat bg-center bg-cover flex items-center justify-center pt-5 pb-10`}
                     href={'/cart'}
                 >
-                    <BottomNavigationAction icon={
+                    <BottomNavigationAction showLabel={false} icon={
                         <LocalGroceryStoreOutlinedIcon className={`${checkActiveRoute('/cart')}`} />
                     } />
                 </Link>
@@ -50,7 +50,7 @@ const CustomBottomNavigation = () => {
                     className={`${pathname === '/profile' ? "bg-[url('/bottom-navigation-overlay.svg')]" : ""} h-full w-full  bg-no-repeat bg-center bg-cover flex items-center justify-center pt-5 pb-10`}
                     href={'/profile'}
                 >
-                    <BottomNavigationAction icon={
+                    <BottomNavigationAction showLabel={false} icon={
                         <PersonOutlineOutlinedIcon className={`${checkActiveRoute('/profile')}`} />
                     } />
                 </Link>
@@ -59,4 +59,4 @@ const CustomBottomNavigation = () => {
     )
 }
 
-export default CustomBottomNavigation
+export default CustomBottomNavigation;

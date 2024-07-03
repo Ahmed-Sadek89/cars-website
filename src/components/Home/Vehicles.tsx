@@ -11,11 +11,11 @@ const Vehicles = () => {
             <div className={`grid grid-cols-${vehicles.length} items-center gap-5`}>
                 {
                     vehicles.map((vehicle, index) => (
-                        <Link href={vehicle.path} key={index} className='flex flex-col items-center text-center gap-3 cursor-pointer'>
+                        <Link href={vehicle.path} key={index} className='flex flex-col items-center text-center gap-3 cursor-pointer h-[20vh]'>
                             <div className={`h-[100px] w-[100px] rounded-full flex items-center justify-center  ${pathname === vehicle.path ? "bg-custom-blue" : "bg-[#D9D9D9]"}  `}>
                                 <Image src={vehicle.image} alt={vehicle.name} width={50} height={50} className='object-cover' />
                             </div>
-                            <h5 className='text-custom-black font-bold text-sm'>{vehicle.name}</h5>
+                            <h5 className='text-custom-black font-normal lg:font-bold text-sm'>{vehicle.name}</h5>
                         </Link>
                     ))
                 }

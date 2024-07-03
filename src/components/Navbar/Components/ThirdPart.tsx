@@ -14,7 +14,7 @@ const ThirdPart = () => {
     <>
       {
         isNotAuthPage ?
-          <div className='flex flex-row items-center gap-2'>
+          <div className='hidden md:flex flex-row items-center gap-2'>
             <VehicleSelectionBtn />
             <CustomDropDown
               link='profile'
@@ -38,9 +38,9 @@ const ThirdPart = () => {
           :
           <Link href={'#'} className='flex flex-row items-center gap-5 text-custom-black font-bold capitalize'>
             <h4>secure {path.split('/')[1]}</h4>
-            <LockIcon className='w-[35px] h-[35px] p-2 rounded-full border border-black'/>
+            <LockIcon className='w-[35px] h-[35px] p-2 rounded-full border border-black' />
           </Link>
-    }
+      }
     </>
   )
 }
