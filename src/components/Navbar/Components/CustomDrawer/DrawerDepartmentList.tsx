@@ -6,6 +6,7 @@ import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import { drawerItems } from '@/mocks/drawerItems';
 import Link from 'next/link';
 import { drawerContact } from '@/mocks/drawerConatct';
+import { drawerUserInfo } from '@/mocks/drawerUserInfo';
 
 
 const DrawerDepartmentList = ({ toggleDrawer }: { toggleDrawer: (event: React.KeyboardEvent | React.MouseEvent) => void }) => {
@@ -16,7 +17,7 @@ const DrawerDepartmentList = ({ toggleDrawer }: { toggleDrawer: (event: React.Ke
             </ListItem>
             {drawerItems.map((link, index) => (
                 <ListItem key={index} disablePadding className='mb-3'>
-                    <Link href={"#"} className='w-full' onClick={toggleDrawer}>
+                    <Link href={"#"} className='w-full'>
                         <ListItemButton className='flex flex-row items-center justify-between w-full'>
                             <div className='flex flex-row items-center gap-3'>
                                 {
@@ -24,17 +25,27 @@ const DrawerDepartmentList = ({ toggleDrawer }: { toggleDrawer: (event: React.Ke
                                     <Image src={link.image} alt={link.title} width={40} height={40} className='object-contain' />
                                 }
                                 <h4 className='text-custom-black' >{link.title}</h4>
-                                {
-                                    link.desc &&
-                                    <span className='text-gray-500'>{link.desc}</span>
-                                }
+
                             </div>
                             <KeyboardArrowRightIcon className='text-[#5C5C5C]' />
                         </ListItemButton>
                     </Link>
                 </ListItem>
             ))}
-            <Divider className='my-4' />
+            <Divider className='mb-10' />
+            {drawerUserInfo.map((link, index) => (
+                <ListItem key={index} disablePadding className='mb-3'>
+                    <Link href={"#"} className='w-full' onClick={toggleDrawer}>
+                        <ListItemButton className='flex flex-row items-center justify-between w-full'>
+                            <div className='flex flex-row items-center gap-3'>
+                                <h4 className='text-custom-black' >{link.title}</h4>
+                                <h6 className='text-[#525252]' >{link.desc}</h6>
+                            </div>
+                        </ListItemButton>
+                    </Link>
+                </ListItem>
+            ))}
+            <Divider className='mb-10' />
             {drawerContact.map((link, index) => (
                 <ListItem key={index} disablePadding className='mb-3'>
                     <Link href={"#"} className='w-full' onClick={toggleDrawer}>

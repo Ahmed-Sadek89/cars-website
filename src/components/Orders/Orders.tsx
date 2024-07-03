@@ -4,6 +4,7 @@ import CustomTabs from './CustomTabs'
 import Image from 'next/image';
 import OrderInfo from './OrderInfo';
 import OrderOptions from './OrderOptions';
+import { Divider } from '@mui/material';
 
 const Orders = () => {
     const [value, setValue] = useState(0);
@@ -12,6 +13,7 @@ const Orders = () => {
     return (
         <>
             <CustomTabs value={value} setValue={setValue} />
+            <Divider />
             <div className="custom-container1 flex flex-col gap-5 py-10">
                 <div className='flex flex-col gap-1'>
                     <h2 className='font-bold text-2xl text-custom-black'>Order History</h2>

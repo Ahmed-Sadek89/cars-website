@@ -3,8 +3,8 @@ import React from 'react'
 
 const SecondLine = () => {
     return (
-        <div className='grid grid-cols-6 items-start gap-10 w-full'>
-            <div className='text-custom-black flex flex-col gap-4'>
+        <div className='grid grid-cols-6 items-start w-full'>
+            <div className='col-span-2 text-custom-black flex flex-col gap-4'>
                 <h2 className='font-bold text-2xl'>Easy Return</h2>
                 <div className='flex flex-col gap-1'>
                     <Link href={'#'} className='text-custom-black font-bold'>Exchange Items</Link>
@@ -12,7 +12,7 @@ const SecondLine = () => {
                     <Link href={'#'} className='text-[#525252]'>Status of return</Link>
                 </div>
             </div>
-            <div className='col-span-5 bg-[#F4F3F3] border border-[#9D9D9D] p-5 rounded flex flex-col gap-5'>
+            <div className='col-span-4 bg-[#F4F3F3] border border-[#9D9D9D] p-5 rounded flex flex-col gap-5'>
                 <div className='flex flex-col gap-1'>
                     <h3 className='text-custom-black'>1. Submit a request</h3>
                     <p className='text-custom-gray'>Click {'"'}submit a request{'"'} button below and fill out the form</p>

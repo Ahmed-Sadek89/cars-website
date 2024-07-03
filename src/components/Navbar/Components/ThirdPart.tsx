@@ -14,19 +14,19 @@ const ThirdPart = () => {
     <>
       {
         isNotAuthPage ?
-          <div className='hidden md:flex flex-row items-center gap-2'>
+          <div className='hidden md:flex flex-row items-center gap-5'>
             <VehicleSelectionBtn />
             <CustomDropDown
               link='profile'
               content={
-                <Image src={'/userIcon.svg'} alt='user' width={30} height={30} className='cursor-pointer' />
+                <Image src={'/userIcon.svg'} alt='user' width={45} height={45} className='cursor-pointer object-contain' />
               }
             />
             <CustomDropDown
               link='cart'
               content={
                 <div className='relative cursor-pointer'>
-                  <Image src={'/cartIcon.svg'} alt={'car'} width={30} height={30} />
+                  <Image src={'/cartIcon.svg'} alt={'car'} width={45} height={45} className='cursor-pointer object-contain'  />
                   <span className='text-center text-white absolute w-[56%] h-[56%] bg-custom-green top-[-5px] right-[-4px] py-[0px] px-[5px] rounded-full text-sm'>
                     {1}
                   </span>

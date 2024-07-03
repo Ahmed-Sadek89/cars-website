@@ -8,7 +8,7 @@ const CustomItemsContainer = ({ value }: { value: number }) => {
     return (
         <div className="custom-container1">
             <CustomTabPanel value={value} index={tabsAndItems[value].id - 1}>
-                <div className='grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-10 items-center justify-center'>
+                <div className='grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-1 items-center justify-center'>
                     {tabsAndItems[value].item.map((item, index) => (
                         <Link
                             href={`/category/${tabsAndItems[value].tab.toLocaleLowerCase()}?item=${item.title.toLocaleLowerCase()}`}

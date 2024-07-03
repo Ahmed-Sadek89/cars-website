@@ -12,20 +12,21 @@ const Profile = () => {
     return (
         <>
             <CustomTabs value={value} setValue={setValue} />
+            <Divider />
             <div className='pt-20 pb-10 flex flex-col gap-10'>
                 <div className='custom-container1'>
                     <ProfileTabsAndOrders />
                 </div>
                 <Divider />
-                <div className='custom-container1'>
+                <div className='custom-container2'>
                     <OrderConfig />
                 </div>
                 <Divider />
-                <div className='custom-container1'>
+                <div className='custom-container2'>
                     <AccountSettings />
                 </div>
                 <Divider />
-                <div className='custom-container1'>
+                <div className='custom-container2'>
                     <Viewed />
                 </div>
             </div>

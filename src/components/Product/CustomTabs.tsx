@@ -29,6 +29,7 @@ const CustomTabs = ({ value, setValue }: props) => {
                                 borderBottom: '2px solid black',
                             },
                             display: { xs: '-webkit-inline-box', lg: "block" },
+                            margin: 0
                         }}
                     >
                         {
@@ -36,13 +37,11 @@ const CustomTabs = ({ value, setValue }: props) => {
                                 <Tab
                                     key={tab.id}
                                     label={tab.tab}
-                                    className='text-black flex-1 font-bold text-xs lg:text-lg capitalize'
+                                    className='text-black flex-1 p-0 font-bold text-xs lg:text-lg capitalize min-w-[120px] min-h-[35px]'
                                     sx={{
                                         '&.Mui-selected': {
                                             color: 'black',
                                         },
-                                        // Make sure each Tab has enough width to cause overflow
-                                        minWidth: '120px'
                                     }}
                                 />
                             ))

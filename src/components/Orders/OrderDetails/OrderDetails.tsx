@@ -4,12 +4,14 @@ import CustomTabs from '../CustomTabs'
 import Details from './Details/Details'
 import OrderSlider from './OrderSilder/OrderSlider'
 import OrderSummary from './OrderSummary/OrderSummary'
+import { Divider } from '@mui/material'
 
 const OrderDetails = () => {
     const [value, setValue] = useState(0)
     return (
         <>
             <CustomTabs value={value} setValue={setValue} />
+            <Divider />
             <div className="custom-container2 py-10 flex flex-col gap-10">
                 <Details />
                 <OrderSlider />
