@@ -8,7 +8,7 @@ const CustomItemsContainer = ({ value }: { value: number }) => {
     return (
         <div className="custom-container1">
             <CustomTabPanel value={value} index={tabsAndItems[value].id - 1}>
-                <div className='grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-10 items-center'>
+                <div className='grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-10 items-center justify-center'>
                     {tabsAndItems[value].item.map((item, index) => (
                         <Link
                             href={`/category/${tabsAndItems[value].tab.toLocaleLowerCase()}?item=${item.title.toLocaleLowerCase()}`}
@@ -18,7 +18,7 @@ const CustomItemsContainer = ({ value }: { value: number }) => {
                             <div className='h-[200px] flex'>
                                 <Image src={item.image} alt={item.title} width={150} height={150} className='object-contain' />
                             </div>
-                            <h6 className='font-bold'>{item.title}</h6>
+                            <h6 className='font-bold text-center'>{item.title}</h6>
                         </Link>
                     ))}
                 </div>

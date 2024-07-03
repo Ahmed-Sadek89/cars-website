@@ -16,7 +16,7 @@ const ProductAddForm = () => {
                 boxShadow: "0px 4px 4px 0px #00000040"
             }}
         >
-            <h4 className='font-bold text-xl text-custom-black text-center'>Please enter these data, you can bring the products you need</h4>
+            <h4 className='font-bold text-md md:text-xl text-custom-black text-center'>Please enter these data, you can bring the products you need</h4>
             <div className='grid grid-cols-3 items-center gap-5'>
                 <SelectInput data={carYear} value={carYearValue} setValue={setCarYearValue} />
                 <SelectInput data={carModels} value={carModelValue} setValue={setCarModelValue} />
@@ -24,9 +24,9 @@ const ProductAddForm = () => {
             </div>
             <textarea rows={10} placeholder='Write a product description' className='outline-none border border-[#525252] rounded shadow-xl p-4'></textarea>
             <div className='border border-[#525252] py-5 flex flex-col justify-center items-center gap-5 rounded'>
-                <div className=' cursor-pointer relative shadow-lg w-1/2 border border-black bg-[#405FF214] p-5 flex flex-col items-center justify-center gap-3'>
+                <div className=' cursor-pointer relative shadow-lg w-1/2 border border-black bg-[#405FF214] p-5 flex flex-col items-center justify-center text-center gap-3'>
                     <Image src={'/search/upload-img.png'} alt='add' width={100} height={100} className='object-contain' />
-                    <h6 className='text-sm text-custom-black'>Download the product of the product you want</h6>
+                    <h6 className='text-xs md:text-sm text-custom-black'>Download the product of the product you want</h6>
                 </div>
                 <button className='w-1/2 py-3 text-white bg-custom-blue rounded'>Send Message</button>
             </div>
