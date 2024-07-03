@@ -3,17 +3,23 @@ import React from 'react'
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Image from 'next/image';
+import Link from 'next/link';
 
 type props = {
     expanded: string | false,
     index: number,
     handleChange: (panel: string) => (event: React.SyntheticEvent, isExpanded: boolean) => void,
+    toggleDrawer: (event: React.KeyboardEvent | React.MouseEvent) => void,
     link: {
         image: string;
         title: string;
+        items: {
+            image: string;
+            title: string;
+        }[]
     }
 }
-const DrawerAccordionList = ({ expanded, handleChange, index, link }: props) => {
+const DrawerAccordionList = ({ expanded, handleChange, toggleDrawer, index, link }: props) => {
     return (
         <Accordion
             expanded={expanded === index.toString()} onChange={handleChange(index.toString())}
@@ -43,8 +49,16 @@ const DrawerAccordionList = ({ expanded, handleChange, index, link }: props) => 
                 </div>
             </AccordionSummary>
             <AccordionDetails sx={{ borderBottom: 'none' }} className='px-10'>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                malesuada lacus ex, sit amet blandit leo lobortis eget.
+                <div className='flex flex-col gap-7'>
+                    {
+                        link.items.map((item, index) => (
+                            <Link href={`/product/${index + 1}`} key={index} className='flex items-center gap-3' onClick={toggleDrawer}>
+                                <Image src={item.image} alt={item.title} width={40} height={40} className='object-contain' />
+                                <h4 className='text-custom-black'>{item.title}</h4>
+                            </Link>
+                        ))
+                    }
+                </div>
             </AccordionDetails>
         </Accordion>
     )

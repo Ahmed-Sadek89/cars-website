@@ -22,19 +22,17 @@ const DrawerDepartmentList = ({ toggleDrawer }: { toggleDrawer: (event: React.Ke
             </ListItem>
             {
                 drawerItems.map((link, index) => (
-                    <DrawerAccordionList expanded={expanded} handleChange={handleChange} key={index} index={index} link={link} />
+                    <DrawerAccordionList expanded={expanded} handleChange={handleChange} key={index} index={index} link={link} toggleDrawer={toggleDrawer} />
                 ))
             }
             <Divider className='my-10' />
             {
-                drawerUserInfo.map((link, index) => (
-                    <DrawerUserInfoList key={index} link={link} toggleDrawer={toggleDrawer} />
-                ))
+                drawerUserInfo.map((link, index) => (<DrawerUserInfoList key={index} link={link} toggleDrawer={toggleDrawer} />))
             }
             <Divider className='mb-10' />
-            {drawerContact.map((link, index) => (
-                <DrawerContactList key={index} link={link} toggleDrawer={toggleDrawer} />
-            ))}
+            {
+                drawerContact.map((link, index) => (<DrawerContactList key={index} link={link} toggleDrawer={toggleDrawer} />))
+            }
         </div>
     )
 }
