@@ -8,14 +8,14 @@ export const metadata: Metadata = {
 
 const NotFoundPage = () => {
     return (
-        <>
-            <div className="relative w-full h-[60vh] mt-10">
+        <aside className="custom-container2 flex flex-col-reverse md:flex-col items-center justify-center py-10 gap-5">
+            <div className="relative w-3/4 md:w-full  h-[60vh]">
                 <Image src={'/not-found.svg'} alt="notfound" fill className="object-contain" />
             </div>
-            <h2 className="text-center text-custom-black text-5xl my-10 tracking-wide font-bold">
+            <h2 className="text-center text-custom-black text-2xl md:text-5xl tracking-wide font-bold">
                 This page will be <span className="text-custom-blue">launched</span> soon
             </h2>
-        </>
+        </aside>
     )
 }
 
