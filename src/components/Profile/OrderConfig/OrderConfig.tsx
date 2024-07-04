@@ -4,7 +4,7 @@ import SecondLine from './SecondLine'
 
 const OrderConfig = () => {
     return (
-        <div className='w-3/4 flex flex-col gap-10'>
+        <div className='w-full lg:w-3/4 flex flex-col gap-10'>
             <FirstLine />
             <SecondLine />
         </div>

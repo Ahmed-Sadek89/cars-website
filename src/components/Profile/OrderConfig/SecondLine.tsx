@@ -3,7 +3,7 @@ import React from 'react'
 
 const SecondLine = () => {
     return (
-        <div className='grid grid-cols-6 items-start w-full'>
+        <div className='grid grid-cols-1 lg:grid-cols-6 items-start w-full gap-5 lg:gap-0'>
             <div className='col-span-2 text-custom-black flex flex-col gap-4'>
                 <h2 className='font-bold text-2xl'>Easy Return</h2>
                 <div className='flex flex-col gap-1'>

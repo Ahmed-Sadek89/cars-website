@@ -13,7 +13,7 @@ const Profile = () => {
         <>
             <CustomTabs value={value} setValue={setValue} />
             <Divider />
-            <div className='pt-20 pb-10 flex flex-col gap-10'>
+            <div className='pt-5 lg:pt-20 pb-10 flex flex-col gap-10'>
                 <div className='custom-container1'>
                     <ProfileTabsAndOrders />
                 </div>
@@ -21,12 +21,12 @@ const Profile = () => {
                 <div className='custom-container2'>
                     <OrderConfig />
                 </div>
-                <Divider />
+                <Divider className='hidden lg:block' />
                 <div className='custom-container2'>
                     <AccountSettings />
                 </div>
-                <Divider />
-                <div className='custom-container2'>
+                <Divider className='hidden lg:block' />
+                <div className='custom-container2 hidden lg:block'>
                     <Viewed />
                 </div>
             </div>
