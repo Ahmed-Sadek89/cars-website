@@ -4,7 +4,7 @@ import React from 'react'
 
 const OrderDetails = () => {
     return (
-        <div className='rounded border border-custom-black p-3 flex flex-col gap-3'>
+        <div className='my-5 lg:my-0 rounded border border-custom-black p-3 flex flex-col gap-3'>
             <h2 className='capitalize font-bold text-xl text-center'>ORDER Details</h2>
             <div className='flex flex-col gap-4 text-custom-black'>
                 <div className='w-full flex pb-3 flex-row items-center justify-between border-b border-b-custom-black'>
