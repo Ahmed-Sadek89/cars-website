@@ -4,7 +4,7 @@ import CustomTabs from './CustomTabs'
 import Image from 'next/image';
 import OrderInfo from './OrderInfo';
 import OrderOptions from './OrderOptions';
-import { Divider } from '@mui/material';
+import { Box, Divider } from '@mui/material';
 
 const Orders = () => {
     const [value, setValue] = useState(0);
@@ -22,15 +22,18 @@ const Orders = () => {
                 <div className='flex flex-col gap-10'>
                     {
                         status.map((order, index) => (
-                            <div
+                            <Box
                                 key={index}
-                                className='p-5 grid grid-cols-8 items-start w-full gap-1 relative'
-                                style={{ boxShadow: "0px 4px 4px 0px #00000040" }}
+                                className='p-5 grid grid-cols-1 lg:grid-cols-8 items-center w-full gap-y-3 lg:gap-y-0 gap-x-0 lg:gap-x-2 relative'
+                                sx={{ boxShadow: { xs: "none", lg: "0px 4px 4px 0px #00000040" } }}
                             >
-                                <Image src={'/item.jpg'} alt='item' width={100} height={100} className='object-cover col-span-1' />
-                                <OrderInfo order={order} />
+                                <div className='flex flex-col lg:flex-row col-span-5 items-center justify-center rounded-xl border border-custom-blue lg:border-transparent'>
+                                    <Image src={'/item.jpg'} alt='item' width={200} height={200} className='object-contain w-[200px] h-[200px] col-span-1' />
+                                    <Divider className='bg-custom-black w-full block lg:hidden' />
+                                    <OrderInfo order={order} />
+                                </div>
                                 <OrderOptions id={index} />
-                            </div>
+                            </Box>
                         ))
                     }
                 </div>

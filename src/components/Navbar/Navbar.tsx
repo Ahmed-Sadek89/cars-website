@@ -4,6 +4,7 @@ import FirstPart from './Components/FirstPart'
 import SecondPart from './Components/SecondPart'
 import ThirdPart from './Components/ThirdPart'
 import { checkIsNotAuthPages } from '../../global/isNotAuthPages'
+import VehicleSelectionBtn from './Components/VehicleSelectionBtn'
 
 const Navbar = () => {
     const path = usePathname()
@@ -16,6 +17,9 @@ const Navbar = () => {
                     <SecondPart />
                     <ThirdPart />
                 </div>
+            </div>
+            <div className="custom-container1 py-5 block md:hidden">
+                <VehicleSelectionBtn />
             </div>
         </header>
     )

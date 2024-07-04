@@ -2,7 +2,7 @@
 import { useRouter } from 'next/navigation'
 import { Backdrop, Divider, Fade, Modal } from '@mui/material'
 import ClearIcon from '@mui/icons-material/Clear';
-import TrackOrderDetails from './TrackOrderDetails';
+import TrackOrderDetails from './TrackOrderDetails/TrackOrderDetails';
 import TrackOrderNumber from './TrackOrderNumber';
 import TrackOrderTimeline from './TrackOrderTimeline';
 import OrderActivities from './OrderActivities';

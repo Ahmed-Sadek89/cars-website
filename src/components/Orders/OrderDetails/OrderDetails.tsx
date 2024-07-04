@@ -10,9 +10,11 @@ const OrderDetails = () => {
     const [value, setValue] = useState(0)
     return (
         <>
-            <CustomTabs value={value} setValue={setValue} />
-            <Divider />
-            <div className="custom-container2 py-10 flex flex-col gap-10">
+            <div className='hidden lg:block'>
+                <CustomTabs value={value} setValue={setValue} />
+                <Divider />
+            </div>
+            <div className="custom-container2 pt-0 pb-5 lg:pt-10 lg:pb-10 flex flex-col gap-10">
                 <Details />
                 <OrderSlider />
                 <OrderSummary />

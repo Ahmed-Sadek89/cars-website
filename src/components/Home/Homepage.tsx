@@ -9,9 +9,7 @@ import Vehicles from './Vehicles'
 const Homepage = () => {
     return (
         <>
-            <div className="custom-container1 pb-5 block md:hidden">
-                <VehicleSelectionBtn />
-            </div>
+            
             <MainSection />
             <Vehicles />
             <CarCollections />

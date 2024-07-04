@@ -28,7 +28,7 @@ const CancelOrderModal = ({ open, setOpen }: props) => {
         >
             <Fade in={open}>
                 <div className='z-[100] border-none outline-none'>
-                    <div className='absolute top-[50%] left-[50%] w-[75%] md:w-[50%]  border-none outline-none flex flex-col gap-3' style={{ transform: "translate(-50%, -50%)" }}>
+                    <div className='absolute top-[50%] left-[50%] w-[95%] sm:w-[50%]  border-none outline-none flex flex-col gap-3' style={{ transform: "translate(-50%, -50%)" }}>
                         <div className='p-10 rounded-xl flex flex-col justify-start items-start gap-3'
                             style={{ background: "linear-gradient(180deg, #F7F8FF 0%, #E8E8E8 100%)" }}
                         >
@@ -47,16 +47,16 @@ const CancelOrderModal = ({ open, setOpen }: props) => {
                                     We will send a message to you at the application details if you reach us and inform you
                                 </h2>
                             </div>
-                            <div className='w-full flex items-center justify-center mt-10 gap-6'>
+                            <div className='w-full flex items-center justify-center mt-10 gap-3 md:gap-6'>
                                 <div
-                                    className='py-2 text-center w-1/3 rounded bg-custom-blue text-white'
+                                    className='cursor-pointer py-2 text-center w-full md:w-1/3 rounded bg-custom-blue text-white'
                                     onClick={() => {
                                         setOpen(false);
                                         router.back()
                                     }}
                                 >Return</div>
                                 <div
-                                    className='py-2 text-center w-1/3 rounded bg-[#C60000] text-white'
+                                    className='cursor-pointer py-2 text-center w-full md:w-1/3 rounded bg-[#C60000] text-white'
                                     onClick={() => {
                                         setOpen(false);
                                         router.back()
