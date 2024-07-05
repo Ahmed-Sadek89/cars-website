@@ -13,7 +13,7 @@ const FilterAndItems = () => {
         setGridColsNumber(cols);
     }, []);
     return (
-        <section className='flex flex-col gap-2 mb-10 mt-10 lg:mt-0'>
+        <section className='flex flex-col gap-2 mb-10 '>
             <GridOptionsAndResults setGridColsNumber={handleSetGridColsNumber} />
             <div className='grid grid-cols-1 lg:grid-cols-4 items-start gap-10'>
                 <Filters />
