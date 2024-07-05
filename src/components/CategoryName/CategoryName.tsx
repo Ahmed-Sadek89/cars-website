@@ -12,13 +12,19 @@ const CategoryName = () => {
     const [value, setValue] = useState(0)
     return (
         <>
-            <CustomTabs value={value} setValue={setValue} />
-            <Divider className='mb-5'/>
+            <div className="hidden lg:block">
+                <CustomTabs value={value} setValue={setValue} />
+                <Divider className='mb-5' />
+            </div>
             <MainSection />
-            <ShopBySize />
-            <TiresTypes />
+            <div className="hidden lg:block">
+                <ShopBySize />
+                <TiresTypes />
+            </div>
             <div className="custom-container1">
-                <ItemTypes />
+                <div className="hidden lg:block">
+                    <ItemTypes />
+                </div>
                 <FilterAndItems />
             </div>
         </>

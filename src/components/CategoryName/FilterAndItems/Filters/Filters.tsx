@@ -11,7 +11,7 @@ import AvailabilityFilter from './AvailabilityFilter'
 
 const Filters = () => {
     return (
-        <aside className='p-4 rounded border-2 border-custom-black flex flex-col gap-4 overflow-hidden'>
+        <aside className='p-4 rounded border-2 border-custom-black hidden lg:flex flex-col gap-4 overflow-hidden'>
             <SortServices />
             <DiameterFilter />
             <Divider />

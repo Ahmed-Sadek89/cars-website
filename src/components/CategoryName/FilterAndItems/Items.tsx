@@ -4,7 +4,7 @@ import React from 'react'
 
 const Items = ({ gridColsNumber }: { gridColsNumber: number }) => {
     return (
-        <div className={`grid grid-cols-${gridColsNumber} items-center gap-5`}>
+        <div className={`hidden lg:grid grid-cols-${gridColsNumber} items-center gap-5`}>
             {
                 new Array(12).fill(1).map((_, index) => (
                     <div key={index} className={`overflow-hidden rounded border border-custom-black flex ${gridColsNumber === 3 ? "flex-col p-0" : "flex-row p-4 gap-3"} items-center`}>
