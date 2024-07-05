@@ -3,7 +3,7 @@ import React from 'react'
 
 const SecondProps = () => {
     return (
-        <div className='flex flex-col gap-28 text-custom-black bg-[#EEEEEE] rounded py-5 px-8'>
+        <div className='hidden lg:flex flex-col gap-28 text-custom-black bg-[#EEEEEE] rounded py-5 px-8'>
             <h2 className='font-bold text-2xl'>Reviews</h2>
             <ul className='list-disc p-4 flex flex-col gap-24'>
                 {

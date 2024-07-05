@@ -43,7 +43,7 @@ const PaymentMethod = ({ payment, setPayment }: props) => {
                     <Radio {...controlProps('p4')} color="success" />
 
                     <label htmlFor='p3' className='flex items-center justify-center p-2 cursor-pointer'>
-                        <Image src={'/payment/p3.jpg'} alt='payment' width={100} height={70} className='object-cover w-[50px] h-[25px] lg:w-[100px] lg:h-[70px]' />
+                        <Image src={'/payment/p3.jpg'} alt='payment' width={100} height={70} className='object-contain w-[50px] h-[25px] lg:w-[100px] lg:h-[70px]' />
                     </label>
                 </div>
             </div>

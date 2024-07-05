@@ -11,11 +11,11 @@ const FirstSection = () => {
                     <h2>G2 (225/50ZR17XL 98W)</h2>
                 </div>
             </div>
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-10 lg:gap-4">
                 <Image src={'/category_name/four.svg'} alt='four' width={100} height={50} className='object-contain' />
                 <p className='text-sm text-custom-black'><span className='text-custom-blue'>2 reviews</span>  |  Item # 9619560</p>
             </div>
-            <div className='text-xl font-bold text-custom-black flex items-center gap-5'>
+            <div className='text-xl font-bold text-custom-blue lg:text-custom-black flex items-center gap-5'>
                 <h2>$ 180.00 ea</h2>
                 <h2>$ 515.00 set</h2>
             </div>

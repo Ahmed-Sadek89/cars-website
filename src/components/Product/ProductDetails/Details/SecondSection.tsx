@@ -3,7 +3,7 @@ import React from 'react'
 const SecondSection = () => {
     return (
         <div className='flex flex-col gap-4 text-custom-black'>
-            <div className='w-1/2 flex flex-col gap-3'>
+            <div className='w-3/4 lg:w-1/2 flex flex-col gap-3'>
                 <h5 className='font-bold'>Specifications</h5>
                 <div className='flex flex-col gap-2 text-sm'>
                     <p className='w-full flex items-center justify-between'>

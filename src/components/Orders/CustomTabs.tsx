@@ -12,7 +12,7 @@ const CustomTabs = ({ value, setValue }: props) => {
         <div className="custom-container1">
             <div className='w-full flex justify-center items-center overflow-hidden'>
 
-                <div className='w-screen overflow-x-scroll lg:overflow-x-auto overflow-y-hidden'>
+                <div className='custom-overlay-scrollbar w-screen overflow-x-scroll lg:overflow-x-auto overflow-y-hidden'>
                     <Tabs
                         value={value}
                         onChange={(_, index) => setValue(index)}

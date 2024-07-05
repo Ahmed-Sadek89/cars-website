@@ -5,7 +5,7 @@ import { FormControl, MenuItem, OutlinedInput, Select } from '@mui/material'
 const CustomSelectInput = () => {
     const [value, setValue] = useState('Size :19 : 245 / 44R20')
     return (
-        <FormControl className=' w-1/4'>
+        <FormControl className='w-3/4 lg:w-1/4'>
             <Select
                 input={<OutlinedInput />}
                 value={value}

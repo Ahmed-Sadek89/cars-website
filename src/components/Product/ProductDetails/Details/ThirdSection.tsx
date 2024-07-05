@@ -27,9 +27,11 @@ const ThirdSection = () => {
                     Add To Cart
                 </Link>
             </div>
-            <button onClick={() => setOpen(true)} className='w-full py-3 rounded border border-custom-black text-custom-black font-bold'>
-                PRODUCT OPTIONS
-            </button>
+            <div className='flex items-end justify-end'>
+                <button onClick={() => setOpen(true)} className='w-2/3 lg:w-full py-3 rounded border border-custom-black text-custom-black font-bold'>
+                    PRODUCT OPTIONS
+                </button>
+            </div>
             <DetailsModel setOpen={setOpen} open={open} />
         </div>
     )
