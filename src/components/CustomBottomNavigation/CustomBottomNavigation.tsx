@@ -30,11 +30,11 @@ const CustomBottomNavigation = () => {
                 </Link>
                 <Link
                     className={`w-full h-full flex items-center justify-center pt-5 pb-10`}
-                    href={'#'}
+                    href={'/orders'}
                 >
                     <BottomNavigationAction showLabel={false} icon={
                         <GridViewOutlinedIcon
-                            className={`text-black text-3xl bg-transparent`}
+                        className={`${checkActiveRoute('/orders')}`}
                         />}
                     />
                 </Link>

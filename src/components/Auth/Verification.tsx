@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation'
 const Verification = () => {
     const router = useRouter()
     return (
-        <div className='border border-black rounded-md p-10 mt-10 flex flex-col gap-5'>
+        <div className='border border-transparent md:border-black rounded-md p-10 mt-10 flex flex-col gap-5'>
             <div>
                 <h2 className='text-center text-[#181818] font-bold text-xl sm:text-2xl mb-2'>Enter verification code</h2>
                 <p className="text-[#4F4F4F] text-center text-md sm:text-lg">Enter code that we have sent to your email your...@domain.com</p>
@@ -34,7 +34,7 @@ const Verification = () => {
                     Submit
                 </button>
             </form>
-            <p className="text-sm sm:text-md">
+            <p className="text-sm sm:text-md text-center md:text-start">
                 By creating an account, you agree with our <Link href={'#'} className="text-custom-blue cursor-pointer">Terms and Conditions</Link> and <Link href={'#'} className="text-custom-blue cursor-pointer">Privacy Statement.</Link>
             </p>
         </div>

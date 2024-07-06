@@ -15,7 +15,7 @@ const About = () => {
             </div>
             <Stats />
             <Links />
-            <div className='relative w-full h-[60vh]'>
+            <div className='relative w-full h-[30vh] md:h-[60vh]'>
                 <Image src={'/about/about-bg.jpg'} alt='bg' fill className='object-cover' />
             </div>
             <Notes />

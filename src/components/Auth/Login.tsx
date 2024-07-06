@@ -10,9 +10,9 @@ const Login = () => {
     return (
         <>
             <h2 className='text-6xl font-bold text-custom-black text-cente uppercase'>welcome</h2>
-            <div className='border border-custom-black rounded px-10 py-5 w-full flex flex-col gap-5'>
+            <div className='border border-transparent md:border-custom-black rounded px-10 py-5 w-full flex flex-col gap-5'>
                 <div className="w-full text-center flex items-center justify-center">
-                    <h5 className="text-[#111] w-1/4 uppercase font-bold text-xl">Let{"'"}s get started!</h5>
+                    <h5 className="text-[#111] w-full md:w-1/4 uppercase font-bold text-xl">Let{"'"}s get started!</h5>
                 </div>
                 <form
                     onSubmit={(e) => {

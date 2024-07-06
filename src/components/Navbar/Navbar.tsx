@@ -18,9 +18,12 @@ const Navbar = () => {
                     <ThirdPart />
                 </div>
             </div>
-            <div className="custom-container1 py-5 block md:hidden">
-                <VehicleSelectionBtn />
-            </div>
+            {
+                isNotAuthPage &&
+                <div className="custom-container1 py-5 block md:hidden">
+                    <VehicleSelectionBtn />
+                </div>
+            }
         </header>
     )
 }

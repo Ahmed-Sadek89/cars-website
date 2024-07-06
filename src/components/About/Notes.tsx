@@ -4,8 +4,8 @@ import React from 'react'
 const Notes = () => {
     return (
         <div className='custom-container2 py-10'>
-            <div className="grid grid-cols-2 items-start gap-5">
-                <div className='rounded p-5 bg-custom-blue text-white flex flex-col gap-2 relative h-[150px]'>
+            <div className="grid grid-cols-1 md:grid-cols-2 items-start gap-5">
+                <div className='rounded p-5 bg-custom-blue text-white flex flex-col gap-2 relative hfull lg:h-[150px]'>
                     <Image src={'/about/vision.svg'} alt='vision' width={20} height={20} />
                     <h2 className='font-bold'>Our Vision</h2>
                     <p className='text-sm font-light'>
@@ -13,7 +13,7 @@ const Notes = () => {
                         automotive parts and accessories available anywhere.
                     </p>
                 </div>
-                <div className='rounded p-5 bg-custom-blue text-white flex flex-col gap-2 relative h-[150px]'>
+                <div className='rounded p-5 bg-custom-blue text-white flex flex-col gap-2 relative hfull lg:h-[150px]'>
                     <Image src={'/about/mission.svg'} alt='mission' width={20} height={20} />
                     <h2 className='font-bold'>Our Mission</h2>
                     <p className='text-sm font-light'>
