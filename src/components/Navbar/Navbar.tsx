@@ -10,7 +10,7 @@ const Navbar = () => {
     const path = usePathname()
     const isNotAuthPage = checkIsNotAuthPages(path)
     return (
-        <header className={`bg-white py-3 ${!isNotAuthPage ? "border-b border-[#A4A4A4]" : ""}`}>
+        <header className={`bg-white py-3 ${!isNotAuthPage ? "border-b border-[#A4A4A4]" : ""} shadow-xl fixed w-full z-10 top-0`}>
             <div className='custom-container1'>
                 <div className='w-full flex flex-row items-center justify-between gap-5'>
                     <FirstPart />

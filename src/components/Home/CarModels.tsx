@@ -43,12 +43,12 @@ const CarModels = () => {
     return (
         <section className='custom-container1 py-10'>
             <div className="slider-container">
-                <Slider {...settings} className={`grid grid-cols-${carModels.length} items-center gap-6`}>
+                <Slider {...settings} className={`grid grid-cols-${carModels.length} items-center gap-10`}>
                     {
                         carModels.map(index => (
                             <div key={index}>
-                                <div className="h-auto lg:h-[150px] w-full mx-3 lg:mx-10 gap-10 flex items-center justify-center">
-                                    <Image src={index} alt={index} width={100} height={100} className="w-[50px] h-[50px] object-contain" />
+                                <div className="h-auto lg:h-[150px] w-full mx-10 lg:mx-20 gap-10 flex items-center justify-center">
+                                    <Image src={index} alt={index} width={100} height={100} className="w-[100px] h-[100px] object-contain" />
                                 </div>
                             </div>
                         ))
