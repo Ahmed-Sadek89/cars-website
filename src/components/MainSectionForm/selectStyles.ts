@@ -9,14 +9,14 @@ export const MenuProps = {
 export const selectStyle = {
     '& .MuiOutlinedInput-notchedOutline': {
         border: "none",
-        borderRight: '1px solid #ddd',
+        borderRight: {xs:"none", lg:'1px solid #ddd'},
     },
     '&:hover .MuiOutlinedInput-notchedOutline': {
         border: "none",
-        borderRight: '1px solid #ddd',
+        borderRight: {xs:"none", lg:'1px solid #ddd'},
     },
     '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
         border: "none",
-        borderRight: '1px solid #ddd',
+        borderRight: {xs:"none", lg:'1px solid #ddd'},
     },
 }
