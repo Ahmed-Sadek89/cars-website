@@ -20,32 +20,33 @@ const PaymentMethod = ({ payment, setPayment }: props) => {
             <h2 className='text-xl font-bold text-custom-black'>Payment methods</h2>
             <div className='flex gap-2 lg:gap-4 items-center flex-wrap' >
                 <div className='flex items-center gap-2'>
+                    <Radio {...controlProps('p4')} color="success" />
+
+                    <label htmlFor='p4' className='flex items-center justify-center p-2 cursor-pointer'>
+                        <Image src={'/payment/p3.jpg'} alt='payment' width={100} height={70} className='object-contain w-[100px] h-[60px]' />
+                    </label>
+                </div>
+                <div className='flex items-center gap-2'>
                     <Radio {...controlProps('p1')} color="success" />
                     <label htmlFor='p1' className='flex items-center justify-center p-2 bg-[#862E9C33] cursor-pointer'>
-                        <Image src={'/payment/p1.png'} alt='payment' width={100} height={50} className='object-cover w-[50px] h-[25px] lg:w-[100px] lg:h-[50px]' />
+                        <Image src={'/payment/p1.png'} alt='payment' width={100} height={50} className='object-cover w-[100px] h-[40px]' />
                     </label>
                 </div>
                 <div className='flex items-center gap-2'>
                     <Radio {...controlProps('p2')} color="success" />
                     <label htmlFor='p2' className='flex items-center justify-center p-2 bg-[#FF000B33] cursor-pointer'>
-                        <Image src={'/payment/p2.png'} alt='payment' width={100} height={50} className='object-cover w-[50px] h-[25px] lg:w-[100px] lg:h-[50px]' />
+                        <Image src={'/payment/p2.png'} alt='payment' width={100} height={50} className='object-cover w-[100px] h-[40px]' />
                     </label>
                 </div>
                 <div className='flex items-center gap-2'>
 
                     <Radio {...controlProps('p3')} color="success" />
 
-                    <label htmlFor='p3' className='flex items-center justify-center p-2 cursor-pointer'>
-                        <Image src={'/payment/visa.svg'} alt='payment' width={100} height={70} className='object-cover w-[60px] h-[42px] lg:w-[100px] lg:h-[70px]' />
+                    <label htmlFor='p3' className='flex items-center justify-center p-2 cursor-pointer bg-[#ebf3fa]'>
+                        <Image src={'/payment/visa.svg'} alt='payment' width={100} height={70} className='object-cover w-[100px] h-[40px]' />
                     </label>
                 </div>
-                <div className='flex items-center gap-2'>
-                    <Radio {...controlProps('p4')} color="success" />
 
-                    <label htmlFor='p3' className='flex items-center justify-center p-2 cursor-pointer'>
-                        <Image src={'/payment/p3.jpg'} alt='payment' width={100} height={70} className='object-contain w-[50px] h-[25px] lg:w-[100px] lg:h-[70px]' />
-                    </label>
-                </div>
             </div>
         </div>
     )

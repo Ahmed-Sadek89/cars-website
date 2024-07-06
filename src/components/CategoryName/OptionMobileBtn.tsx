@@ -7,7 +7,7 @@ const OptionMobileBtn = () => {
     const [open, setOpen] = useState(false);
     return (
         <>
-            <div className='py-5 flex lg:hidden items-end justify-end w-full'>
+            <div className='py-5 flex lg:hidden items-end justify-end w-full custom-container1'>
                 <button className='flex items-center gap-1 bg-custom-blue rounded py-3 px-6 text-white' onClick={() => setOpen(true)}>
                     <TuneIcon />
                     <span className='font-semibold'>Options</span>
