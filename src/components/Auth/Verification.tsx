@@ -23,10 +23,7 @@ const Verification = () => {
                             key={index}
                             type="number"
                             maxLength={1}
-                            className="
-                            bg-[#F3F8FF] p-2 w-full h-[70px] rounded text-center text-[#181818] text-4xl border border-[#D9D9D9] 
-                           
-                        "
+                            className="bg-[#F3F8FF] p-2 w-full h-[70px] rounded text-center text-[#181818] text-4xl border border-[#D9D9D9]"
                         />
                     ))}
                 </div>

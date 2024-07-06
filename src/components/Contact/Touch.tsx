@@ -7,11 +7,11 @@ const Touch = () => {
                 <h2 className='font-bold text-4xl text-custom-black'>
                     <span className='text-custom-blue'>Get In</span> Touch
                 </h2>
-                <p className='text-sm text-custom-black'>
+                <p className='text-xs md:text-sm text-custom-black'>
                     Etiam pharetra egestas interdum blandit viverra morbi consequat mi non bibendum
                     egestas quam egestas nulla.
                 </p>
-                <form onSubmit={(e) => e.preventDefault()} className="grid grid-cols-1 md:grid-cols-2 gap-x-0 md:gap-x-4 gap-y-8 w-full h-full">
+                <form onSubmit={(e) => e.preventDefault()} className="grid grid-cols-1 md:grid-cols-2 gap-x-0 md:gap-x-4 gap-y-4 lg:gap-y-8 w-full h-full">
                     <div className="flex flex-col p-3 rounded-lg border border-[#E9E9E9]">
                         <label htmlFor="firstName">First Name*</label>
                         <input type="text" id="firstName" placeholder="Ali" className="mt-1 p-2  rounded" />

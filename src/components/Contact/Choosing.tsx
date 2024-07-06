@@ -3,7 +3,7 @@ import React from 'react'
 
 const Choosing = () => {
     return (
-        <div className='flex gap-5 items-start'>
+        <div className='flex flex-col md:flex-row gap-5 items-start'>
             <div className='flex flex-col gap-2 rounded-lg px-5 py-10'>
                 <Image src={'/contact/offers.svg'} alt='offers' width={50} height={50} />
                 <h3 className='text-custom-black font-bold text-lg'>Special Financing Offers</h3>

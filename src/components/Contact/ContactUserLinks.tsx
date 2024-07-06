@@ -5,7 +5,7 @@ import React from 'react'
 
 const ContactUserLinks = () => {
     return (
-        <div className='grid grid-cols-2 w-full items-start gap-5'>
+        <div className='grid grid-cols-1 md:grid-cols-2 w-full items-start gap-5'>
             <div className='p-5 rounded border border-custom-black flex flex-col gap-3 h-[300px]'>
                 <div className='flex items-center gap-3 relative'>
                     <Image src={'/contact/account.svg'} alt='account' width={30} height={30} />
