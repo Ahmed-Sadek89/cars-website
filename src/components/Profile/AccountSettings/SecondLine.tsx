@@ -1,8 +1,32 @@
 import Image from 'next/image'
-import React from 'react'
+import React, { memo, useState } from 'react'
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
+import { vehiclesGarage } from '@/mocks/vehiclesGarage';
+import { Checkbox } from '@mui/material';
+import { red } from '@mui/material/colors';
 
 const SecondLine = () => {
+    const [garage, setGarage] = useState(vehiclesGarage);
+    const [checkedVehicles, setCheckedVehicles] = useState<string[]>([]);
+    // remove one item
+    const handleDelete = (item: string) => {
+        setGarage(garage.filter((i) => i !== item));
+    };
+
+    const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        const { id, checked } = event.target;
+        if (checked) {
+            setCheckedVehicles([...checkedVehicles, id]);
+        } else {
+            setCheckedVehicles(checkedVehicles.filter((i) => i !== id));
+        }
+    };
+
+    // remove the selected items
+    const handleRemoveChecked = () => {
+        setGarage(garage.filter((item) => !checkedVehicles.includes(item)));
+        setCheckedVehicles([]);
+    };
     return (
         <div className='grid grid-cols-2 items-start gap-16'>
             <div>
@@ -32,22 +56,46 @@ const SecondLine = () => {
                     <p className='text-xs'>Add your vehicles & find parts easily</p>
                 </div>
                 <div className='w-full border border-custom-black py-4 px-8 rounded flex flex-col gap-2'>
-                    <div className='w-full flex items-center justify-between'>
-                        <div className='flex items-center gap-3'>
-                            <input type="radio" name="cars" value="2018 BMW 3-Series" />
-                            <label htmlFor="2018 BMW 3-Series" className='text-custom-black'>2018 BMW 3-Series</label>
-                        </div>
-                        <DeleteOutlineIcon className='cursor-pointer text-custom-gray' />
-                    </div>
-                    <div className='w-full flex items-center justify-between'>
-                        <div className='flex items-center gap-3'>
-                            <input type="radio" name="cars" value="2018 Ram 2500" />
-                            <label htmlFor="2018 Ram 2500" className='text-[#525252]'>2018 Ram 2500</label>
-                        </div>
-                        <DeleteOutlineIcon className='cursor-pointer text-custom-gray' />
-                    </div>
-                    <div className='flex items-center justify-center w-full'>
-                        <button className='w-3/4 mt-14 rounded py-3 border border-custom-black font-bold'>Add Vehicle</button>
+                    {
+                        garage.length > 0 ?
+                            garage.map((item, index) => (
+                                <div key={index} className='w-full flex items-center justify-between'>
+                                    <div className='flex items-center gap-3'>
+                                        <Checkbox
+                                            name="cars"
+                                            value={item}
+                                            id={item}
+                                            checked={checkedVehicles.includes(item)}
+                                            onChange={handleCheckboxChange}
+                                            sx={{
+                                                color: red[800],
+                                                '&.Mui-checked': {
+                                                    color: red[600],
+                                                },
+                                            }}
+                                        />
+                                        <label htmlFor={item} className='text-custom-black cursor-pointer'>{item}</label>
+                                    </div>
+                                    <DeleteOutlineIcon
+                                        className='cursor-pointer text-custom-gray hover:text-red-600'
+                                        onClick={() => handleDelete(item)}
+                                    />
+                                </div>
+
+                            ))
+                            :
+                            <h2 className='font-bold'>No vehicles added to garage</h2>
+                    }
+
+                    <div className={`grid ${checkedVehicles.length > 0 ? "grid-cols-2" : "grid-cols-1"} items-center justify-center w-full mt-14 gap-5`}>
+                        {
+                            checkedVehicles.length > 0 &&
+                            <button
+                                className='rounded py-3 border border-red-600 bg-red-600 text-white font-bold'
+                                onClick={handleRemoveChecked}
+                            >Remove {checkedVehicles.length} Vehicle</button>
+                        }
+                        <button className='rounded py-3 border border-custom-black font-bold'>Add Vehicle</button>
                     </div>
                 </div>
             </div>
@@ -55,4 +103,4 @@ const SecondLine = () => {
     )
 }
 
-export default SecondLine
+export default memo(SecondLine)
