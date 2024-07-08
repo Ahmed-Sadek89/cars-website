@@ -1,4 +1,4 @@
-import React, { createContext, useState, useContext } from 'react';
+import React, { createContext, useEffect, useState } from 'react';
 
 interface CarsStateManagement {
     id: number;
@@ -19,7 +19,15 @@ interface CarsContext {
 export const CarContext = createContext<CarsContext | null>(null);
 
 const CarContextProvider = ({ children }: { children: React.ReactNode }) => {
-    const [cars, setCars] = useState<CarsStateManagement[]>([]);
+
+    const [cars, setCars] = useState<CarsStateManagement[]>(() => {
+        const savedCars = localStorage.getItem('cars');
+        return savedCars ? JSON.parse(savedCars) : [];
+    });
+
+    useEffect(() => {
+        localStorage.setItem('cars', JSON.stringify(cars));
+    }, [cars]);
 
     const addCar = (car: CarsStateManagement) => {
         setCars(prev => [car, ...prev]);
