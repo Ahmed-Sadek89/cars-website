@@ -26,9 +26,11 @@ const VehicleSelectionBtn = () => {
                         <Image src={hovered ? '/carBlackIcon.svg' : '/carIcon.svg'} alt={'car'} width={30} height={30} /> :
                         <Image src={'/carBlackIcon.svg'} alt={'car'} width={30} height={30} />
                     }
-                    <span className='text-white absolute w-auto bg-custom-green bottom-[6px] py-[0px] px-[4px] rounded-full text-sm'>
-                        {carContext?.cars.length}
-                    </span>
+                    {carContext?.cars.length !== 0 &&
+                        <span className='text-white absolute w-auto bg-custom-green bottom-[6px] py-[0px] px-[6px] rounded-full text-sm'>
+                            {carContext?.cars.length && carContext?.cars.length > 5 ?"5+": carContext?.cars.length}
+                        </span>
+                    }
                 </div>
                 <span className=''>
                     {carContext?.cars.length === 0 ?

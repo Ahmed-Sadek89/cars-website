@@ -39,7 +39,7 @@ const SavedSearchModal = ({ open, setOpen }: props) => {
                                 <h2 className='text-custom-black text-lg from-black'>My Garage</h2>
                                 <button className='text-custom-blue text-sm' onClick={() => carContext?.deleteAllCars()}>Clear all</button>
                             </div>
-                            <div className='flex flex-col gap-1 w-full'>
+                            <div className='flex flex-col gap-1 w-full h-[250px] overflow-y-scroll'>
                                 {
                                     carContext?.cars.map((item, index) => (
                                         <div key={item.id} className='flex items-center justify-between w-full'>
