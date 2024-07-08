@@ -9,7 +9,6 @@ interface CarsStateManagement {
 
 interface CarsContext {
     cars: CarsStateManagement[];
-    setCars: React.Dispatch<React.SetStateAction<CarsStateManagement[]>>;
     addCar: (car: CarsStateManagement) => void;
     deleteCarById: (id: number) => void;
     deleteAllCars: () => void;
@@ -19,14 +18,21 @@ interface CarsContext {
 export const CarContext = createContext<CarsContext | null>(null);
 
 const CarContextProvider = ({ children }: { children: React.ReactNode }) => {
-
-    const [cars, setCars] = useState<CarsStateManagement[]>(() => {
-        const savedCars = localStorage.getItem('cars');
-        return savedCars ? JSON.parse(savedCars) : [];
-    });
+    const [cars, setCars] = useState<CarsStateManagement[]>([]);
 
     useEffect(() => {
-        localStorage.setItem('cars', JSON.stringify(cars));
+        if (typeof window !== 'undefined') {
+            const savedCars = localStorage.getItem('cars');
+            if (savedCars) {
+                setCars(JSON.parse(savedCars));
+            }
+        }
+    }, []);
+
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            localStorage.setItem('cars', JSON.stringify(cars));
+        }
     }, [cars]);
 
     const addCar = (car: CarsStateManagement) => {
@@ -47,7 +53,7 @@ const CarContextProvider = ({ children }: { children: React.ReactNode }) => {
     };
 
     return (
-        <CarContext.Provider value={{ cars, setCars, addCar, deleteCarById, deleteAllCars, updateCarById }}>
+        <CarContext.Provider value={{ cars, addCar, deleteCarById, deleteAllCars, updateCarById }}>
             {children}
         </CarContext.Provider>
     );
