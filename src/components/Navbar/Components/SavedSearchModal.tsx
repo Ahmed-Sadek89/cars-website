@@ -28,7 +28,7 @@ const SavedSearchModal = ({ open, setOpen }: props) => {
         >
             <Fade in={open}>
                 <div className='z-[100] border-none outline-none'>
-                    <div className='absolute top-[50%] w-1/3 left-[50%] border-none outline-none flex flex-col gap-3' style={{ transform: "translate(-50%, -50%)" }}>
+                    <div className='absolute top-[50%] w-[85%] lg:w-1/3 left-[50%] border-none outline-none flex flex-col gap-3' style={{ transform: "translate(-50%, -50%)" }}>
                         <div className='bg-white p-6 rounded flex flex-col justify-start items-start gap-3 relative'>
                             <div onClick={() => {
                                 setOpen(false);
@@ -45,7 +45,7 @@ const SavedSearchModal = ({ open, setOpen }: props) => {
                                         <div key={item.id} className='flex items-center justify-between w-full'>
                                             <Link
                                                 href={`/search?car_model=${item.name}&car_year=${item.year}&car_series=${item.series}`}
-                                                className='flex items-center gap-2'
+                                                className='flex items-center gap-0 sm:gap-1'
                                                 onClick={() => {
                                                     carContext.updateCarById(item.id)
                                                     setOpen(false)
