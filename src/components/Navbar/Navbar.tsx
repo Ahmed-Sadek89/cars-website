@@ -25,21 +25,25 @@ const Navbar = () => {
 
 
     return (
-        <header className={`bg-white py-3 ${!isNotAuthPage ? "border-b border-[#A4A4A4]" : ""} ${isScrolled ? "shadow-xl" : ""} sticky w-full z-10 top-0`}>
-            <div className='custom-container1'>
-                <div className='w-full flex flex-row items-center justify-between gap-5'>
-                    <FirstPart />
-                    <SecondPart />
-                    <ThirdPart />
+        <>
+            <header className={`bg-white py-3 ${!isNotAuthPage ? "border-b border-[#A4A4A4]" : ""} ${isScrolled ? "shadow-xl" : ""} sticky w-full z-10 top-0`}>
+                <div className='custom-container1'>
+                    <div className='w-full flex flex-row items-center justify-between gap-5'>
+                        <FirstPart />
+                        <SecondPart />
+                        <ThirdPart />
+                    </div>
                 </div>
-            </div>
-            {isNotAuthPage && (
-                <div className="custom-container1 py-5 block md:hidden">
-                    <VehicleSelectionBtn />
-                </div>
-            )}
-        </header>
+            </header>
 
+            {
+                isNotAuthPage && (
+                    <div className="custom-container1 py-5 block md:hidden">
+                        <VehicleSelectionBtn />
+                    </div>
+                )
+            }
+        </>
 
     )
 }

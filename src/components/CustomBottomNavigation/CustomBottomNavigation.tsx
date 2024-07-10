@@ -16,10 +16,10 @@ const CustomBottomNavigation = () => {
         return "text-black text-3xl bg-transparent"
     }
     return (
-        <Paper className='fixed bottom-0 left-0 right-0 block md:hidden border-t border-t-custom-blue ' elevation={3}>
+        <Paper className='fixed bottom-0 left-0 right-0 block md:hidden  ' elevation={3}>
             <BottomNavigation className=' bg-[#F4F4F4]'>
                 <Link
-                    className={`${pathname === '/' ? "bg-[url('/bottom-navigation-overlay.svg')]" : ""} h-full w-full  bg-no-repeat bg-center bg-cover flex items-center justify-center pt-5 pb-10`}
+                    className={` h-full w-full  bg-no-repeat bg-center bg-cover flex items-center justify-center pt-5 pb-10`}
                     href={'/'}
                 >
                     <BottomNavigationAction showLabel={false} icon={
@@ -39,7 +39,7 @@ const CustomBottomNavigation = () => {
                     />
                 </Link>
                 <Link
-                    className={`${pathname === '/cart' ? "bg-[url('/bottom-navigation-overlay.svg')]" : ""} h-full w-full  bg-no-repeat bg-center bg-cover flex items-center justify-center pt-5 pb-10`}
+                    className={` h-full w-full  bg-no-repeat bg-center bg-cover flex items-center justify-center pt-5 pb-10`}
                     href={'/cart'}
                 >
                     <BottomNavigationAction showLabel={false} icon={
@@ -47,7 +47,7 @@ const CustomBottomNavigation = () => {
                     } />
                 </Link>
                 <Link
-                    className={`${pathname === '/profile' ? "bg-[url('/bottom-navigation-overlay.svg')]" : ""} h-full w-full  bg-no-repeat bg-center bg-cover flex items-center justify-center pt-5 pb-10`}
+                    className={` h-full w-full  bg-no-repeat bg-center bg-cover flex items-center justify-center pt-5 pb-10`}
                     href={'/profile'}
                 >
                     <BottomNavigationAction showLabel={false} icon={

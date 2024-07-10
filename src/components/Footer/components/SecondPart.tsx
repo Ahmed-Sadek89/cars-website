@@ -7,7 +7,6 @@ import Image from 'next/image';
 const SecondPart = () => {
   return (
     <div className='custom-container2 py-10'>
-      {/* <div className='flex flex-col flex-wrap gap-10 md:gap-0 items-start w-full justify-between'> */}
 
       <div className='flex flex-wrap items-center justify-between gap-y-10 w-full'>
         <div className='flex flex-col gap-5 w-full lg:w-1/3'>
@@ -17,7 +16,7 @@ const SecondPart = () => {
             </Link>
             <p className='font-[300] text-xs'>Receive pricing updates, shopping tips & more!</p>
           </div>
-          <div className='flex flex-wrap  gap-20 items-start w-full '>
+          <div className='hidden lg:flex flex-wrap  gap-20 items-start w-full '>
             {
               footerLinks.slice(0, 2).map((list, index) => (
                 <div key={index} className='flex flex-col gap-4'>
@@ -33,6 +32,20 @@ const SecondPart = () => {
           </div>
         </div>
         <div className='w-full lg:w-2/3 '>
+          <div className='flex lg:hidden justify-between mb-4  gap-20 items-start w-full '>
+            {
+              footerLinks.slice(0, 2).map((list, index) => (
+                <div key={index} className='flex flex-col gap-4'>
+                  <h3 className='font-bold text-md'>{list.category}</h3>
+                  <div className='flex flex-col gap-3 md:gap-6'>
+                    {list.links.map((link, i) => (
+                      <Link key={i} href={link.href} className='font-[200] text-sm'>{link.name}</Link>
+                    ))}
+                  </div>
+                </div>
+              ))
+            }
+          </div>
           <div className='flex flex-wrap gap-5 lg:gap-0 items-start w-full justify-between'>
             {
               footerLinks.slice(2).map((list, index) => (

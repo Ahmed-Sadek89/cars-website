@@ -9,7 +9,7 @@ const CarModels = () => {
     const settings = {
         dots: false,
         infinite: true,
-        slidesToShow: 12,
+        slidesToShow: carModels.length,
         slidesToScroll: 1,
         autoplay: true,
         speed: 500,
@@ -19,7 +19,7 @@ const CarModels = () => {
             {
                 breakpoint: 1024,
                 settings: {
-                    slidesToShow: 12,
+                    slidesToShow: carModels.length,
                     slidesToScroll: 1,
                 }
             },
@@ -41,14 +41,14 @@ const CarModels = () => {
         ]
     };
     return (
-        <section className='custom-container1 py-10'>
+        <section className='custom-container1 py-5'>
             <div className="slider-container">
-                <Slider {...settings} className={`grid grid-cols-${carModels.length} items-center gap-10`}>
+                <Slider {...settings} className={`grid grid-cols-12 items-center gap-10`}>
                     {
                         carModels.map(index => (
                             <div key={index}>
-                                <div className="h-auto lg:h-[150px] w-full mx-10 lg:mx-20 gap-10 flex items-center justify-center">
-                                    <Image src={index} alt={index} width={100} height={100} className="w-[100px] h-[100px] object-contain" />
+                                <div className="h-auto w-auto gap-5 flex items-center justify-center">
+                                    <Image src={index} alt={index} width={70} height={70} className="w-[70px] h-[70px] object-contain" />
                                 </div>
                             </div>
                         ))

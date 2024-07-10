@@ -4,14 +4,14 @@ import './style.css'
 
 const CarCollections = () => {
     return (
-        <section className='custom-container1 py-5'>
+        <section className='custom-container1'>
             <div className={`grid grid-cols-2 items-center gap-4`}>
                 {
                     carCollections.map((collection, index) => (
                         <Link
                             href={collection.path}
                             key={index}
-                            className={`h-[20vh] lg:h-[30vh] w-full bg-no-repeat bg-cover bg-center rounded-lg overflow-hidden`}
+                            className={`h-[20vh] lg:h-[30vh] w-full bg-no-repeat bg-cover bg-center overflow-hidden`}
                             style={{ backgroundImage: `url(${collection.image})` }}
                         >
                             <div className='bg-[#00000066] w-full  h-full flex justify-center custom-style'>
