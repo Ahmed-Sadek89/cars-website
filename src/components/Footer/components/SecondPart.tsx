@@ -62,8 +62,10 @@ const SecondPart = () => {
             <div>
               <div className='flex flex-col gap-7'>
                 <h3 className='font-bold text-md'>Our Mobile App</h3>
-                <PlatformLink text1="Download on the" text2="Apple Store" imagePath={'/apple.svg'} />
-                <PlatformLink text1="Get in on" text2="Google Play" imagePath={'/googlePlay.svg'} />
+                <div className="grid grid-cols-2 lg:grid-cols-1 items-center gap-4">
+                  <PlatformLink text1="Download on the" text2="Apple Store" imagePath={'/apple.svg'} />
+                  <PlatformLink text1="Get in on" text2="Google Play" imagePath={'/googlePlay.svg'} />
+                </div>
                 <h3 className='font-bold text-md'>Connect With Us</h3>
                 <div className='flex flex-row items-center w-full justify-between'>
                   <Link href={'#'}>
