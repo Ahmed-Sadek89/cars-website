@@ -22,7 +22,7 @@ const VehicleSelectionModal = ({ open, setOpen }: props) => {
         >
             <Fade in={open}>
                 <div className='z-[100] border-none outline-none'>
-                    <div className='absolute top-[50%] w-full left-[50%] border-none outline-none flex flex-col gap-3' style={{ transform: "translate(-50%, -50%)" }}>
+                    <div className='fixed top-[50%] w-full left-[50%] border-none outline-none flex flex-col gap-3' style={{ transform: "translate(-50%, -50%)" }}>
                         <MainSectionForm setOpen={setOpen}/>
                     </div>
                 </div>

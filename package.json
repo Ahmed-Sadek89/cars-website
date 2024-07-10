@@ -2,6 +2,11 @@
   "name": "cars-website",
   "version": "0.1.0",
   "private": true,
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not op_mini all"
+  ],
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -13,6 +18,7 @@
     "@emotion/styled": "^11.11.5",
     "@mui/icons-material": "^5.15.19",
     "@mui/material": "^5.15.19",
+    "core-js": "^3.37.1",
     "framer-motion": "^11.2.13",
     "next": "^14.2.3",
     "nextjs-toploader": "^1.6.12",
