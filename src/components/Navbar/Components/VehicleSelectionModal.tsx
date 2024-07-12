@@ -5,13 +5,6 @@ import Modal from '@mui/material/Modal';
 import Fade from '@mui/material/Fade';
 import MainSectionForm from '@/components/MainSectionForm/MainSectionForm';
 
-const style = {
-    position: 'absolute' as 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    width: '100%',
-};
 
 export default function VehicleSelectionModal({ open, setOpen }: any) {
     const handleOpen = () => setOpen(true);
@@ -20,10 +13,8 @@ export default function VehicleSelectionModal({ open, setOpen }: any) {
     return (
         <div>
             <Modal
-                aria-labelledby="transition-modal-title"
-                aria-describedby="transition-modal-description"
                 open={open}
-                onClose={handleClose}
+                onClose={() => setOpen(false)}
                 closeAfterTransition
                 slots={{ backdrop: Backdrop }}
                 slotProps={{
@@ -33,9 +24,11 @@ export default function VehicleSelectionModal({ open, setOpen }: any) {
                 }}
             >
                 <Fade in={open}>
-                    <Box sx={style}>
-                        <MainSectionForm setOpen={setOpen} />
-                    </Box>
+                    <div className='z-[100] border-none outline-none'>
+                        <div className='absolute top-[50%] h-[55vh] md:h-[46vh] lg:h-[65vh] left-[50%] w-3/4  border-none outline-none flex flex-col gap-3' style={{ transform: "translate(-50%, -50%)" }}>
+                            <MainSectionForm setOpen={setOpen} />
+                        </div>
+                    </div>
                 </Fade>
             </Modal>
         </div>
