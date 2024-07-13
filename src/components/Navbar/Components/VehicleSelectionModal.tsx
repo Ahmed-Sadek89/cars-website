@@ -25,7 +25,7 @@ export default function VehicleSelectionModal({ open, setOpen }: any) {
             >
                 <Fade in={open}>
                     <div className='z-[100] border-none outline-none'>
-                        <div className='absolute top-[50%] h-[55vh] md:h-[46vh] lg:h-[65vh] left-[50%] w-3/4  border-none outline-none flex flex-col gap-3' style={{ transform: "translate(-50%, -50%)" }}>
+                        <div className='absolute top-[50%] h-[55vh] md:h-[46vh] lg:h-[65vh] left-[50%] w-[90%] lg:w-3/4  border-none outline-none flex flex-col gap-3' style={{ transform: "translate(-50%, -50%)" }}>
                             <MainSectionForm setOpen={setOpen} />
                         </div>
                     </div>
