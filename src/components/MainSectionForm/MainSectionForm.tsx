@@ -27,7 +27,7 @@ const MainSectionForm = ({ setOpen }: {
     }
     return (
         <section className='px-[15px] w-full mx-auto h-full'>
-            <div className=' bg-custom-blue rounded-md shadow-xl pb-6 pt-9 px-8 flex flex-col overflow-hidden h-full gap-2'>
+            <div className=' bg-custom-blue rounded-md shadow-xl pb-6 pt-9 px-8 flex flex-col overflow-hidden h-full gap-[10px]'>
                 <h6 className='text-white'>FIND PARTS FOR YOUR VEHICLE</h6>
                 <div
                     className='bg-transparent lg:bg-white grid grid-cols-1 lg:grid-cols-4  items-center rounded-full p-1 lg:p-4 gap-1'
