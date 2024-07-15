@@ -27,7 +27,7 @@ const MainSectionForm = ({ setOpen }: {
     }
     return (
         <section className='custom-container2'>
-            <div className=' bg-custom-blue rounded-md shadow-xl pb-6 pt-9 px-8 flex flex-col gap-3'>
+            <div className=' bg-custom-blue rounded-md shadow-xl pb-6 pt-9 px-8 flex flex-col overflow-hidden h-full'>
                 <h6 className='text-white'>FIND PARTS FOR YOUR VEHICLE</h6>
                 <div
                     className='bg-transparent lg:bg-white grid grid-cols-1 lg:grid-cols-4  items-center rounded-full p-1 lg:p-4'
