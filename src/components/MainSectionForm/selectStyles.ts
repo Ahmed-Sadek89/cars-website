@@ -1,6 +1,8 @@
 export const MenuProps = {
     PaperProps: {
-        
+        style: {
+            maxHeight: 48 * 4.5 + 8,
+        },
     },
 };
 
