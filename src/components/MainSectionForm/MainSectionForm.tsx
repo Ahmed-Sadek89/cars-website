@@ -9,7 +9,7 @@ interface MainSectionFormProps {
     setOpen: React.Dispatch<React.SetStateAction<boolean>> | null;
 }
 
-const MainSectionForm: React.FC<MainSectionFormProps> = ({ setOpen }) => {
+const MainSectionForm = ({ setOpen }: { setOpen: React.Dispatch<React.SetStateAction<boolean>> | null }) => {
     const [carModelValue, setCarModelValue] = useState(carModels[0]);
     const [carYearValue, setCarYearValue] = useState(carYear[0]);
     const [carSeriesValue, setCarSeriesValue] = useState(carSeries[0]);
@@ -26,7 +26,6 @@ const MainSectionForm: React.FC<MainSectionFormProps> = ({ setOpen }) => {
         };
         carContext?.addCar(selectedCar);
     };
-
     return (
         <section className={styles['main-section-form']}>
             <div className={styles['main-section-form-container']}>
