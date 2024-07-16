@@ -17,7 +17,7 @@ const Profile = () => {
                 <div className='custom-container1'>
                     <ProfileTabsAndOrders />
                 </div>
-                <Divider />
+                <Divider className='hidden lg:block' />
                 <div className='custom-container2'>
                     <OrderConfig />
                 </div>
