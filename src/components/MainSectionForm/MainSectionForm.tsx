@@ -7,7 +7,7 @@ import { carModels, carSeries, carYear } from '@/mocks/searchInputs';
 import { CarContext } from '@/app/context/CarContext';
 import styles from './MainSectionForm.module.css';
 
-const MainSectionForm = ({ setOpen }: { setOpen: React.Dispatch<React.SetStateAction<boolean>> }) => {
+const MainSectionForm = ({ setOpen }: { setOpen: React.Dispatch<React.SetStateAction<boolean>> | null }) => {
     const [carModelValue, setCarModelValue] = useState(carModels[0]);
     const [carYearValue, setCarYearValue] = useState(carYear[0]);
     const [carSeriesValue, setCarSeriesValue] = useState(carSeries[0]);
