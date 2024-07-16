@@ -28,8 +28,8 @@ const SecondLine = () => {
         setCheckedVehicles([]);
     };
     return (
-        <div className='grid grid-cols-2 items-start gap-16'>
-            <div>
+        <div className='grid grid-cols-1 md:grid-cols-2 items-start gap-16'>
+            <div className='flex flex-col items-start'>
                 <div className='flex flex-col gap-1 w-auto mb-10 mt-5 rounded-md border border-custom-black p-3 text-custom-black bg-transparent transition duration-300 hover:bg-[#405FF226] hover:border-[#405FF226]'>
                     <h3 className='font-bold text-xl'>Wish Lists</h3>
                     <p className='text-xs'>Create Wish Lists and share them with your friends</p>
@@ -50,7 +50,7 @@ const SecondLine = () => {
                     <button className='mt-5 rounded py-3 text-white bg-custom-blue'>ADD TO CART</button>
                 </div>
             </div>
-            <div className='w-full'>
+            <div className='w-full flex flex-col items-start'>
                 <div className='flex flex-col gap-1 w-auto mb-10 mt-5 rounded-md border border-custom-black p-3 text-custom-black bg-transparent transition duration-300 hover:bg-[#405FF226] hover:border-[#405FF226]'>
                     <h3 className='font-bold text-xl'>Garage</h3>
                     <p className='text-xs'>Add your vehicles & find parts easily</p>

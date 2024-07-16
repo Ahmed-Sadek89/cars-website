@@ -12,7 +12,7 @@ const FirstLine = () => {
                 <h3 className='font-bold text-xl'>Account Settings</h3>
                 <p className='text-xs'>Manage your account information & settings</p>
             </div>
-            <div className='grid grid-cols-2 items-start gap-5'>
+            <div className='grid grid-cols-1 md:grid-cols-2 items-start w-full gap-5'>
                 <div className='w-full border border-custom-black p-4 rounded'>
                     <div className='w-full flex items-center justify-between'>
                         <h2 className='font-bold text-lg'>Account Access</h2>
@@ -24,7 +24,7 @@ const FirstLine = () => {
                         </button>
                         <ChangePasswordModal open={open} setOpen={setOpen} />
                     </div>
-                    <div className=' mt-5 flex flex-col gap-2 w-1/2'>
+                    <div className=' mt-5 flex flex-col gap-2 w-full md:w-1/2'>
                         <div className='w-full flex items-center justify-between'>
                             <h2>Email :</h2>
                             <span className='text-custom-gray text-sm'>johndoe123@example.com</span>
