@@ -1,11 +1,13 @@
-"use client";
 import React, { useContext, useState } from 'react';
 import SelectInput from './SelectInput';
 import SearchIcon from '@mui/icons-material/Search';
 import Link from 'next/link';
 import { carModels, carSeries, carYear } from '@/mocks/searchInputs';
 import { CarContext } from '@/app/context/CarContext';
-import './MainSectionForm.css';
+import styles from './MainSectionForm.module.css'; 
+interface MainSectionFormProps {
+    setOpen: React.Dispatch<React.SetStateAction<boolean>> | null;
+}
 
 const MainSectionForm: React.FC<MainSectionFormProps> = ({ setOpen }) => {
     const [carModelValue, setCarModelValue] = useState(carModels[0]);
@@ -31,8 +33,6 @@ const MainSectionForm: React.FC<MainSectionFormProps> = ({ setOpen }) => {
                 <h6 className={styles['form-title']}>FIND PARTS FOR YOUR VEHICLE</h6>
                 <div className={styles['input-container']}>
                     <SelectInput data={carModels} value={carModelValue} setValue={setCarModelValue} />
-                </div>
-                <div className={styles['input-container-large']}>
                     <SelectInput data={carYear} value={carYearValue} setValue={setCarYearValue} />
                     <SelectInput data={carSeries} value={carSeriesValue} setValue={setCarSeriesValue} />
                 </div>
@@ -52,4 +52,3 @@ const MainSectionForm: React.FC<MainSectionFormProps> = ({ setOpen }) => {
 };
 
 export default MainSectionForm;
-
