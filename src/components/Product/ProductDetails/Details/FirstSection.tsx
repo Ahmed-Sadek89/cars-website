@@ -6,7 +6,7 @@ const FirstSection = () => {
         <div className='flex flex-col gap-2'>
             <div className='flex items-start gap-4 w-full'>
                 <FavoriteBorderIcon className='text-white text-4xl cursor-pointer bg-[#B1B1B1] p-1 rounded transition duration-300 hover:bg-custom-blue' />
-                <div className='text-3xl font-bold text-custom-black'>
+                <div className='text-xs sm:text-3xl font-bold text-custom-black'>
                     <h2>NITTO® 213990 - NT555 G2</h2>
                     <h2>G2 (225/50ZR17XL 98W)</h2>
                 </div>

@@ -5,9 +5,9 @@ import SearchIcon from '@mui/icons-material/Search';
 import Link from 'next/link';
 import { carModels, carSeries, carYear } from '@/mocks/searchInputs';
 import { CarContext } from '@/app/context/CarContext';
-import './MainSectionForm.css';
+import styles from './MainSectionForm.module.css';
 
-const MainSectionForm: React.FC<MainSectionFormProps> = ({ setOpen }) => {
+const MainSectionForm = ({ setOpen }: { setOpen: React.Dispatch<React.SetStateAction<boolean>> }) => {
     const [carModelValue, setCarModelValue] = useState(carModels[0]);
     const [carYearValue, setCarYearValue] = useState(carYear[0]);
     const [carSeriesValue, setCarSeriesValue] = useState(carSeries[0]);
@@ -24,7 +24,6 @@ const MainSectionForm: React.FC<MainSectionFormProps> = ({ setOpen }) => {
         };
         carContext?.addCar(selectedCar);
     };
-
     return (
         <section className={styles['main-section-form']}>
             <div className={styles['main-section-form-container']}>

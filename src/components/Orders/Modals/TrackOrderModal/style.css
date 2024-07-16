@@ -20,7 +20,7 @@
     background: #fff;
     cursor: pointer;
     position: relative;
-    z-index: 200;
+    z-index: 5;
     @apply border-2 border-[#FA8232];
 }
 
@@ -40,9 +40,7 @@
     content: none;
 }
 
-.timeline li.active-tl {
-    z-index: 1000;
-}
+
 
 
 .timeline li.active-tl:before {
