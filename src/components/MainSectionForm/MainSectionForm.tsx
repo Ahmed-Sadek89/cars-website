@@ -4,7 +4,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import Link from 'next/link';
 import { carModels, carSeries, carYear } from '@/mocks/searchInputs';
 import { CarContext } from '@/app/context/CarContext';
-import styles from './MainSectionForm.module.css'; 
+import styles from './MainSectionForm.module.css';
 interface MainSectionFormProps {
     setOpen: React.Dispatch<React.SetStateAction<boolean>> | null;
 }
@@ -32,18 +32,21 @@ const MainSectionForm = ({ setOpen }: { setOpen: React.Dispatch<React.SetStateAc
                 <h6 className={styles['form-title']}>FIND PARTS FOR YOUR VEHICLE</h6>
                 <div className={styles['input-container']}>
                     <SelectInput data={carModels} value={carModelValue} setValue={setCarModelValue} />
-                    <SelectInput data={carYear} value={carYearValue} setValue={setCarYearValue} />
-                    <SelectInput data={carSeries} value={carSeriesValue} setValue={setCarSeriesValue} />
-                </div>
-                <div className={styles['search-container']}>
-                    <Link
-                        href={`/search?car_model=${carModelValue}&car_year=${carYearValue}&car_series=${carSeriesValue}`}
-                        className={styles['search-button']}
-                        onClick={handleSearchCar}
-                    >
-                        <SearchIcon />
-                        <span className='capitalize'>search cars</span>
-                    </Link>
+                    <div className={styles['input-inline-container']}>
+                        <SelectInput data={carYear} value={carYearValue} setValue={setCarYearValue} />
+                        <SelectInput data={carSeries} value={carSeriesValue} setValue={setCarSeriesValue} />
+
+                    </div>
+                    <div className={styles['search-container']}>
+                        <Link
+                            href={`/search?car_model=${carModelValue}&car_year=${carYearValue}&car_series=${carSeriesValue}`}
+                            className={styles['search-button']}
+                            onClick={handleSearchCar}
+                        >
+                            <SearchIcon />
+                            <span className='capitalize'>search cars</span>
+                        </Link>
+                    </div>
                 </div>
             </div>
         </section>
