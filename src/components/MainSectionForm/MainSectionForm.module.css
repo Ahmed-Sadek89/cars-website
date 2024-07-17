@@ -1,10 +1,11 @@
 /* MainSectionForm.module.css */
 
 .main-section-form {
-    padding: 15px;
     width: 100%;
-    margin: auto;
-    height: 100%;
+    max-width: 1200px;
+    margin: 0px auto;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .main-section-form-container {
@@ -25,14 +26,15 @@
 }
 
 .input-container {
-    background-color: #fff;
+    background-color: transparent;
     border-radius: 50px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 10px;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 10px;
 }
 
 .input-inline-container {
+    grid-column: span 2;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     /* Two columns */
@@ -48,14 +50,17 @@
     align-items: center;
 }
 
+/* 001783 */
 .search-button {
     background-color: #001783;
     color: white;
     border-radius: 50px;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 10px 20px;
+    margin: 0px 5px;
     gap: 5px;
     text-decoration: none;
 }
@@ -68,10 +73,14 @@
     text-transform: capitalize;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 800px) {
     .input-container {
-        grid-template-columns: 1fr;
-        background: transparent;
+        grid-template-columns: repeat(4, 1fr);
+        background: #fff;
+    }
+
+    .search-button {
+        background-color: #405FF2;
     }
 
 }
