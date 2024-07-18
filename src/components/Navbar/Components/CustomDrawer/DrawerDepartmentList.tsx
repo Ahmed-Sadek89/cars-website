@@ -1,12 +1,14 @@
 "use client"
 import React from 'react';
-import { Divider, ListItem } from '@mui/material'
+import { Divider, ListItem, ListItemButton } from '@mui/material'
 import { drawerItems } from '@/mocks/drawerItems';
 import { drawerContact } from '@/mocks/drawerConatct';
 import { drawerUserInfo } from '@/mocks/drawerUserInfo';
 import DrawerAccordionList from './DrawerAccordionList';
 import DrawerUserInfoList from './DrawerUserInfoList';
 import DrawerContactList from './DrawerContactList';
+import Link from 'next/link';
+import ContactPageIcon from '@mui/icons-material/ContactPage';
 
 const DrawerDepartmentList = ({ toggleDrawer }: { toggleDrawer: (event: React.KeyboardEvent | React.MouseEvent) => void }) => {
     const [expanded, setExpanded] = React.useState<string | false>(false);
@@ -33,6 +35,15 @@ const DrawerDepartmentList = ({ toggleDrawer }: { toggleDrawer: (event: React.Ke
             {
                 drawerContact.map((link, index) => (<DrawerContactList key={index} link={link} toggleDrawer={toggleDrawer} />))
             }
+            <ListItem disablePadding className='mb-3'>
+                <Link href='/trader' className='w-full' onClick={toggleDrawer}>
+                    <ListItemButton className='flex gap-3 flex-row items-center w-full'>
+                        <ContactPageIcon />
+                        <h4 className='text-custom-black' >For Traders</h4>
+                    </ListItemButton>
+                </Link>
+            </ListItem>
+
         </div>
     )
 }
