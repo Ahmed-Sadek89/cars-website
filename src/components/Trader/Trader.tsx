@@ -1,13 +1,59 @@
 "use client"
 import { TextField, Button, Box, Typography, MenuItem, Select, InputLabel, FormControl } from '@mui/material';
 import { styled } from '@mui/system';
+import { useState } from 'react';
 
 const Input = styled('input')({
     display: 'none',
 });
 
 const Trader = () => {
-    const cities = ["New York", "Los Angeles", "Chicago", "Houston", "Phoenix"];
+    const cities = [
+        "Cairo",
+        "Alexandria",
+        "Giza",
+        "Shubra El Kheima",
+        "Port Said",
+        "Suez",
+        "El Mahalla El Kubra",
+        "Luxor",
+        "Mansoura",
+        "Tanta",
+        "Asyut",
+        "Ismailia",
+        "Fayoum",
+        "Zagazig",
+        "Damietta",
+        "Aswan",
+        "Minya",
+        "Beni Suef"
+    ];
+    const egyptianGovernorates = [
+        "Cairo",
+        "Alexandria",
+        "Giza",
+        "Red Sea",
+        "Beheira",
+        "Fayoum",
+        "Gharbia",
+        "Ismailia",
+        "Menofia",
+        "Minya",
+        "Qalyubia",
+        "New Valley",
+        "Suez",
+        "Aswan",
+        "Assiut"]
+    const [selectedCity, setSelectedCity] = useState('');
+    const [selectedGovernorate, setSelectedGovernorate] = useState('');
+
+    const handleCityChange = (event: any) => {
+        setSelectedCity(event.target.value);
+    };
+
+    const handleGovernorateChange = (event: any) => {
+        setSelectedGovernorate(event.target.value);
+    };
     return (
         <aside className='py-10 flex items-center justify-center'>
 
@@ -34,13 +80,31 @@ const Trader = () => {
                             required
                         />
 
-                        <div className="my-10 flex items-start flex-col lg:flex-row w-full justify-between gap-0 lg:gap-10">
+                        <div className="flex items-start flex-col lg:flex-row w-full justify-between gap-0 lg:gap-10">
                             <Typography>Address Details:</Typography>
                             <div className='w-full flex-1 flex flex-col gap-5'>
-                                <FormControl fullWidth required>
+
+                                <FormControl>
+                                    <InputLabel id="governorate-select-label">Governorate</InputLabel>
+                                    <Select
+                                        labelId="governorate-select-label"
+                                        value={selectedGovernorate}
+                                        onChange={handleGovernorateChange}
+                                    >
+                                        {egyptianGovernorates.map((governorate) => (
+                                            <MenuItem key={governorate} value={governorate}>
+                                                {governorate}
+                                            </MenuItem>
+                                        ))}
+                                    </Select>
+                                </FormControl>
+
+                                <FormControl>
                                     <InputLabel id="city-select-label">City</InputLabel>
                                     <Select
                                         labelId="city-select-label"
+                                        value={selectedCity}
+                                        onChange={handleCityChange}
                                     >
                                         {cities.map((city) => (
                                             <MenuItem key={city} value={city}>
@@ -69,6 +133,12 @@ const Trader = () => {
                                 />
                             </div>
                         </div>
+                        <TextField
+                            label="Store name"
+                            variant="outlined"
+                            fullWidth
+                            required
+                        />
                         <div className='w-2/3 lg:2-1/3 pt-10 flex flex-col gap-2'>
                             <div className='w-full'>
                                 <Input
@@ -95,7 +165,7 @@ const Trader = () => {
                                 </label>
                             </div>
                         </div>
-                        <Button type="submit" variant="contained" color="primary" fullWidth  className='w-full bg-custom-green hover:bg-custom-green'>
+                        <Button type="submit" variant="contained" color="primary" fullWidth className='w-full bg-custom-green hover:bg-custom-green'>
                             Submit
                         </Button>
                     </form>

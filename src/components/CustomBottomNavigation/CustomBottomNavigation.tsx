@@ -16,7 +16,7 @@ const CustomBottomNavigation = () => {
         return "text-black text-3xl bg-transparent"
     }
     return (
-        <Paper className='fixed bottom-0 left-0 right-0 block md:hidden  ' elevation={3}>
+        <Paper className='fixed bottom-0 left-0 right-0 block md:hidden  z-[200]' elevation={3}>
             <BottomNavigation className=' bg-[#F4F4F4]'>
                 <Link
                     className={` h-full w-full  bg-no-repeat bg-center bg-cover flex items-center justify-center pt-5 pb-10`}
@@ -30,11 +30,11 @@ const CustomBottomNavigation = () => {
                 </Link>
                 <Link
                     className={`w-full h-full flex items-center justify-center pt-5 pb-10`}
-                    href={'/orders'}
+                    href={'/mobile_list'}
                 >
                     <BottomNavigationAction showLabel={false} icon={
                         <GridViewOutlinedIcon
-                        className={`${checkActiveRoute('/orders')}`}
+                            className={`${checkActiveRoute('/mobile_list')}`}
                         />}
                     />
                 </Link>

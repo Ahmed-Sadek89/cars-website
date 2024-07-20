@@ -12,7 +12,7 @@ const Footer = () => {
     <>
       {
         isNotAuthPage &&
-        <footer className='bg-custom-black text-white w-full overflow-hidden'>
+        <footer className={`${path !== '/mobile_list' ? "block" : "hidden"} bg-custom-black text-white w-full overflow-hidden `}>
           {/* <FirstPart />
           <Divider className='bg-gray-600' /> */}
           <SecondPart />
